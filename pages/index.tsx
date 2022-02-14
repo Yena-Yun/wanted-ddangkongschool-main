@@ -9,7 +9,7 @@ export default function Home() {
   }, 2000);
 
   return (
-    <div className='container'>
+    <div className="container">
       <div>
         <span>{text} 적용 완료</span>
       </div>
