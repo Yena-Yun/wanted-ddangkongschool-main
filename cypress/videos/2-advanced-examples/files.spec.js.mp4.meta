@@ -1,0 +1,21 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=4962
+END=7591
+title=Files cy.fixture() - load a fixture
+[CHAPTER]
+TIMEBASE=1/1000
+START=9643
+END=10233
+title=Files cy.fixture() or require - load a fixture
+[CHAPTER]
+TIMEBASE=1/1000
+START=9804
+END=10828
+title=Files cy.readFile() - read file contents
+[CHAPTER]
+TIMEBASE=1/1000
+START=10785
+END=11865
+title=Files cy.writeFile() - write to a file
