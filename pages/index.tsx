@@ -12,6 +12,14 @@ export default function Home() {
     <div className="container">
       <div>
         <span>{text} 적용 완료</span>
+        <button>버튼</button>
+        <ul>
+          <li>1</li>
+          <li>4</li>
+          <li>3</li>
+          <li>3</li>
+          <li>5</li>
+        </ul>
       </div>
     </div>
   );
