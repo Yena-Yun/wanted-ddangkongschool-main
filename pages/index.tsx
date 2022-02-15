@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import { Main, Intro, Video, Checks, SlideOverlay } from 'components';
-import ReadingBook from 'src/component/ReadingBook';
-import DiaryBook from 'src/component/DiaryBook';
-import Download from 'src/component/Download';
-import Footer from 'src/component/Footer';
+import {
+  Main,
+  Intro,
+  Video,
+  Checks,
+  ReadingBook,
+  DiaryBook,
+  SlideOverlay,
+  Download,
+  Footer,
+} from 'components';
 
 export default function Home() {
   return (
@@ -18,11 +24,11 @@ export default function Home() {
         <Intro />
         <Video />
         <Checks />
+        <ReadingBook />
+        <DiaryBook />
         <SlideOverlay />
-        <ReadingBook/>
-        <DiaryBook/>
-        <Download/>
-        <Footer/>
+        <Download />
+        <Footer />
       </Container>
     </>
   );
