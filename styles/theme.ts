@@ -6,8 +6,9 @@ const responsive = {
 };
 
 const color: DefaultTheme = {
+  primary: '#fdc441',
+  default: '#333333',
   white: '#fff',
-  black: '#000',
 };
 
 const common: DefaultTheme = {

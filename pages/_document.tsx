@@ -20,6 +20,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
             rel="stylesheet"
           ></link>
+          <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
