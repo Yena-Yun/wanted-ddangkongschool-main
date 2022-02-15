@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Noto Sans KR', sans-serif;
-	text-align: center;
 }
 
 ol, ul {

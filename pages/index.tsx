@@ -8,6 +8,8 @@ import {
   Checks,
   ReadingBook,
   DiaryBook,
+  Books,
+  Bookmarks,
   SlideOverlay,
   Download,
   Footer,
@@ -26,6 +28,8 @@ export default function Home() {
         <Checks />
         <ReadingBook />
         <DiaryBook />
+        <Books />
+        <Bookmarks />
         <SlideOverlay />
         <Download />
         <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Download() {
+const Download = () => {
 
   return (
     <Contaniner>
@@ -17,7 +17,8 @@ export default function Download() {
             </LogoImgBox>
           <InnerSection>
             <Section>
-              책을 보는 새로운 방법
+              책을 보는 <br />
+              <div style={{margin: "20px 0"}}>새로운 방법</div>
             </Section>
           </InnerSection>
           <InnerBottom>
@@ -283,6 +284,6 @@ const DownloadDesc = styled.div`
     line-height: 1;
   }
 `
-
+export default Download;
 
 
