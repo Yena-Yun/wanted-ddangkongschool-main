@@ -113,6 +113,7 @@ const Title = styled.div`
 `
 
 const TicketImgBox = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 360px;
@@ -177,19 +178,19 @@ const InnerTicketImgBox = styled.div`
 
   @media screen and (min-width: 1200px){
     width: 640px;
-    padding-left: 140px;
+    padding-left: 30px;
     padding-top: 124px;
   }
 
   @media (min-width: 950px) and (max-width: 1200px) {
     width: 572px;
-    padding-left: 79px;
+    padding-left: 10px;
     padding-top: 124px;
   }
 
   @media (min-width: 768px) and (max-width: 950px) {
     width: 407px;
-    padding-left: 66px;
+    padding-left: 50px;
     padding-top: 124px;
   }
 `
@@ -278,7 +279,7 @@ const DownloadImgSection = styled.div`
   margin-left: 0;
 
   @media screen and (min-width: 1200px){
-    padding-left: 177px;
+    padding-left: 147px;
     padding-top: 182px;
     margin-right: 25px;
     align-items: flex-start;
@@ -286,12 +287,12 @@ const DownloadImgSection = styled.div`
 
   @media (min-width: 950px) and (max-width: 1200px) {
     flex: initial;
-    padding-left: 74px;
+    padding-left: 54px;
     padding-top: 182px;
   }
 
   @media (min-width: 768px) and (max-width: 950px) {
-    padding-left: 60px;
+    padding-left: 20px;
     padding-top: 198px;
     margin-right: 25px;
     align-items: flex-start;
