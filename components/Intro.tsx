@@ -27,7 +27,6 @@ const Intro = () => {
 
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.color.primary};
-  height: 573px;
   padding: 150px 0;
   ${({ theme }) => theme.common.flexColumn}
   align-items: center;

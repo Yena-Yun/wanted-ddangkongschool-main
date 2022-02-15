@@ -21,39 +21,34 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	font-family: 'Noto Sans KR', sans-serif;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-div, span {
-  position: relative;
-  box-sizing: border-box;
-}
-
-img {
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
 }
 
 `;

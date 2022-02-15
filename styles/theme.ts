@@ -1,8 +1,8 @@
 import { DefaultTheme } from 'styled-components';
 
-const responsive = {
+const media = {
   desktop: '1200px',
-  ipad: '768px',
+  tablet: '768px',
 };
 
 const color: DefaultTheme = {
@@ -24,7 +24,7 @@ const common: DefaultTheme = {
 };
 
 const theme = {
-  responsive,
+  media,
   color,
   common,
 };

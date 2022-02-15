@@ -10,7 +10,7 @@ import {
   DiaryBook,
   Books,
   Bookmarks,
-  SlideOverlay,
+  ReviewSlide,
   Download,
   Footer,
 } from 'components';
@@ -30,7 +30,7 @@ export default function Home() {
         <DiaryBook />
         <Books />
         <Bookmarks />
-        <SlideOverlay />
+        <ReviewSlide />
         <Download />
         <Footer />
       </Container>
