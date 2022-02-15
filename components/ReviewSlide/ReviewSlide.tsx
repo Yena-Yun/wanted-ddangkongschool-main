@@ -1,20 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { ReviewList, ReviewThumbnail } from 'components';
+import { ReviewList } from 'components';
 
 const ReviewSlide = () => {
   return (
     <Wrapper>
-      <SlideHeader>
+      <TitleWrap>
         <Image
           src="/images/slideOverlay/thumbnail-frame.png"
-          width={195}
+          width={190}
           height={130}
           alt="slide-thumbnail-frame"
         />
-        <ThumbnailBorder></ThumbnailBorder>
-      </SlideHeader>
+        <ThumbnailBorder>
+          <Image
+            src="/images/slideOverlay/thumbnail/thumbnail1.png"
+            width="100%"
+            height="100%"
+            alt="slide-thumbnail"
+          />
+        </ThumbnailBorder>
+      </TitleWrap>
       <ReviewList />
     </Wrapper>
   );
@@ -22,18 +29,17 @@ const ReviewSlide = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 703px;
-  padding: 159px 0 150px;
+  padding: 159px 0 0;
   ${({ theme }) => theme.common.flexCenter}
   flex-direction: column;
   background-image: url('/images/slideOverlay/background.png');
   background-position: 75% center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
 `;
 
-const SlideHeader = styled.div`
+const TitleWrap = styled.div`
+  margin-bottom: 50px;
   position: relative;
 `;
 
@@ -45,7 +51,7 @@ const ThumbnailBorder = styled.div`
   position: absolute;
   top: 0;
   left: 68px;
-  /* z-index: 10; */
+  z-index: 10;
 `;
 
 export default ReviewSlide;

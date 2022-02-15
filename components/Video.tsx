@@ -11,30 +11,31 @@ const Video = () => {
           <Line key={idx} />
         ))}
       </Background>
-      <TextWrap>
-        <Title>
-          랜선 라이브
-          <br />
-          북클래스
-        </Title>
-        <Content>
-          친구들과 함께 <br />
-          그림 그리기, 퀴즈 풀기. <br />
-          선생님과 대화하며 경험해요!
-        </Content>
-      </TextWrap>
+      <ContentWrap>
+        <TextWrap>
+          <Title>
+            랜선 라이브
+            <br />
+            북클래스
+          </Title>
+          <Content>
+            친구들과 함께 <br />
+            그림 그리기, 퀴즈 풀기. <br />
+            선생님과 대화하며 경험해요!
+          </Content>
+        </TextWrap>
 
-      <VideoWrap>
-        <video autoPlay loop muted>
-          <source src="/movies/main-video.mp4" type="video/mp4" />
-        </video>
-      </VideoWrap>
+        <VideoWrap>
+          <video autoPlay loop muted>
+            <source src="/movies/main-video.mp4" type="video/mp4" />
+          </video>
+        </VideoWrap>
+      </ContentWrap>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  height: 673px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -54,6 +55,15 @@ const Background = styled.div`
   align-content: space-between;
 `;
 
+const ContentWrap = styled.div`
+  display: flex;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    ${({ theme }) => theme.common.flexColumn}
+    align-items: center;
+  }
+`;
+
 const Line = styled.div`
   height: 2px;
   background: #000000;
@@ -64,6 +74,10 @@ const Line = styled.div`
 const TextWrap = styled.div`
   margin-right: 110px;
   z-index: 3;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    margin-right: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -72,12 +86,14 @@ const Title = styled.h2`
   line-height: 70px;
   color: ${({ theme }) => theme.color.default};
   margin-bottom: 50px;
+  text-align: center;
 `;
 
 const Content = styled.p`
   font-size: 24px;
   line-height: 40px;
   color: ${({ theme }) => theme.color.default};
+  text-align: center;
 `;
 
 const VideoWrap = styled.div`
@@ -88,12 +104,27 @@ const VideoWrap = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 3;
+  position: relative;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    display: flex;
+    justify-content: center;
+  }
 
   & video {
     width: 540px;
     margin-top: 58px;
     margin-left: 80px;
     border-radius: 10px;
+    position: absolute;
+    top: 0;
+
+    @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+      margin: 0;
+      width: 543px;
+      top: 59px;
+      left: 79px;
+    }
   }
 `;
 

@@ -8,7 +8,6 @@ import DiaryBook from './DiaryBook';
 import ReviewSlide from './ReviewSlide/ReviewSlide';
 import ReviewThumbnail from './ReviewSlide/ReviewThumbnail';
 import ReviewList from './ReviewSlide/ReviewList';
-import SlideBtn from './ReviewSlide/SlideBtn';
 import Books from './Books/Books';
 import Bookmarks from './Bookmarks';
 import Download from './Download';
@@ -25,7 +24,6 @@ export {
   ReviewSlide,
   ReviewThumbnail,
   ReviewList,
-  SlideBtn,
   Books,
   Bookmarks,
   Download,

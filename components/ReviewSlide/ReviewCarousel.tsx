@@ -14,7 +14,7 @@ interface sliderProps {
   autoplaySpeed?: number;
 }
 
-const ReviewCarousel = ({ children, autoplay = false }: sliderProps) => {
+const ReviewCarousel = ({ children, autoplay = true }: sliderProps) => {
   const settings = useMemo<Settings>(
     () => ({
       cssEase: 'linear',
@@ -35,6 +35,7 @@ const ReviewCarousel = ({ children, autoplay = false }: sliderProps) => {
 
 const SlideWrapper = styled.div`
   width: 80vw;
+  height: 550px;
 `;
 
 const StyledSlider = styled(Slider)`
