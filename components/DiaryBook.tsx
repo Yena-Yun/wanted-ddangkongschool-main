@@ -22,7 +22,7 @@ const DiaryBook = () => {
 
 const Contaniner = styled.div`
   overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(249, 249, 249);
   display: flex;
   width: 100%;
   flex-direction: column;

@@ -14,25 +14,32 @@ interface sliderProps {
   /** 슬라이더 속도 */
   speed?: number;
   /** 반복 여부 */
-  loop?: boolean;
+  infinite?: boolean;
+  // 부드럽게
+  cssEase: string;
+  /** 자동재생 (속도 설정시 number 타입으로) */
+  autoplaySpeed?: number,
 }
 
 export default function BooksCarousel({
   children,
   className,
   autoplay = true,
-  speed = 300,
-  loop = true,
+  speed = 1800,
+  infinite,
+  cssEase,
+  autoplaySpeed,
 }: sliderProps) {
   const settings = useMemo<Settings>(
     () => ({
-      infinite: loop,
+      cssEase: "linear",
+      infinite: true,
       speed: speed,
       slidesToShow: 14,
       autoplay: Boolean(autoplay),
-      autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
+      autoplaySpeed: 0,
     }),
-    [autoplay, loop, speed],
+    [autoplay, infinite, speed, cssEase, autoplaySpeed],
   );
   return (
     <SlideWrapper className={className}>

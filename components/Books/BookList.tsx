@@ -73,7 +73,7 @@ const items:itemsProps[] = [
 
 const BookList = () => {
   return (
-    <Slick>
+    <Slick cssEase='linear'>
       {items.map((item, idx) => (
         <SliderItem key={idx}>
           <Img src={`/images/books/book${idx + 1}.png`} alt={item.name} />
@@ -97,13 +97,13 @@ const Img = styled.img`
   @media (min-width: 1200px){
     margin-left: 50px;
     height: 250px;
-    width: 188px !important;
+    width: 200px !important;
   }
 
   @media screen and(min-width: 768px) {
     margin-left: 50px;
     height: 250px;
-    width: 188px !important;
+    width: 200px !important;
   }
 `
 
