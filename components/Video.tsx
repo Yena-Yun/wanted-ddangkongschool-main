@@ -13,12 +13,12 @@ const Video = () => {
       </Background>
       <ContentWrap>
         <TextWrap>
-          <Title>
+          <Title data-aos="fade-up">
             랜선 라이브
             <br />
             북클래스
           </Title>
-          <Content>
+          <Content data-aos="fade-up">
             친구들과 함께 <br />
             그림 그리기, 퀴즈 풀기. <br />
             선생님과 대화하며 경험해요!

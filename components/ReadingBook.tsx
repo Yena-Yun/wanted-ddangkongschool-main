@@ -2,25 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ReadingBook = () => {
-
+  
   return (
     <Contaniner>
       <InnerContainner>
         <Header>
-          <Title>실시간 방송 형태로 제공되는 <br />
+          <Title data-aos="fade-up">실시간 방송 형태로 제공되는 <br />
           신개념 책 읽기</Title>
-          <TabTitle>실시간 방송 형태로 <br />
+          <TabTitle data-aos="fade-up">실시간 방송 형태로 <br />
           제공되는 <br />
           신개념 책 읽기</TabTitle>
-          <SubTitle>방송 중이라면 언제든 접속하세요. <br />
+          <SubTitle data-aos="fade-up">방송 중이라면 언제든 접속하세요. <br />
           수강신청, 수업예약 없이 편하게 수업참여가 가능해요.</SubTitle>
-          <TabSubTitle>방송 중이라면 언제든 접속하세요. <br />
+          <TabSubTitle data-aos="fade-up">방송 중이라면 언제든 접속하세요. <br />
           수강신청, 수업예약 없이 <br />
           편하게 수업참여가 가능해요.</TabSubTitle>
         </Header>
         <ImgBox>
           <DeskTopImg src="/images/style5_1.png" alt="DeskTopImg"/>
           <MobileImg src="/images/style5_2.png" alt="MobileImg"/>
+          <MobileSmallImg src="/images/mobileStyle5_2.png" alt="MobileSmallImg"/>
         </ImgBox>
       </InnerContainner>
     </Contaniner>
@@ -153,13 +154,11 @@ const DeskTopImg = styled.img`
 `
 
 const MobileImg = styled.img`
-  position: absolute;
-  top: 49px;
-  left: 209px;
-  width: 132px;
-  height: 240px;
+  display: none;
 
   @media screen and (min-width: 1200px){
+    display: block;
+    position: absolute;
     top: 77px;
     left: 554px;
     width: 823px;
@@ -167,10 +166,25 @@ const MobileImg = styled.img`
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
+    display: block;
+    position: absolute;
     width: 505px;
     height: 527px;
     top: 47px;
     left: 305px;
   }
+`
+
+const MobileSmallImg = styled.img`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 49px;
+    left: 209px;
+    width: 132px;
+    height: 240px;
+    }
 `
 export default ReadingBook;

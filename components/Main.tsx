@@ -7,7 +7,7 @@ const Main = () => {
     <Wrapper>
       <Header />
       <TitleWrap>
-        <Title>
+        <Title data-aos="fade-up">
           책 읽는 재미,
           <br />
           <span>땅콩스쿨</span>이<br />

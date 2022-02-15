@@ -6,7 +6,7 @@ const Download = () => {
     <Contaniner>
       <InnerContainner>
         <Header>
-          <Title>지금 다운로드 받으세요!</Title>
+          <Title data-aos="fade-up">지금 다운로드 받으세요!</Title>
         </Header>
         <TicketImgBox>
           <TicketImg src="/images/style10_1.png" alt="TicketImg"/>
@@ -178,7 +178,7 @@ const InnerTicketImgBox = styled.div`
 
   @media screen and (min-width: 1200px){
     width: 640px;
-    padding-left: 30px;
+    padding-left: 60px;
     padding-top: 124px;
   }
 
@@ -279,7 +279,7 @@ const DownloadImgSection = styled.div`
   margin-left: 0;
 
   @media screen and (min-width: 1200px){
-    padding-left: 147px;
+    padding-left: 110px;
     padding-top: 182px;
     margin-right: 25px;
     align-items: flex-start;

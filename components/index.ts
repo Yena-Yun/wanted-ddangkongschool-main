@@ -12,6 +12,9 @@ import Books from './Books/Books';
 import Bookmarks from './Bookmarks';
 import Download from './Download';
 import Footer from './Footer';
+import FloatingBtn from './FloatingBtn';
+import MouseAnimation from './MouseAnimation'
+
 
 export {
   Main,
@@ -28,4 +31,6 @@ export {
   Bookmarks,
   Download,
   Footer,
+  FloatingBtn,
+  MouseAnimation,
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import {
@@ -13,9 +13,16 @@ import {
   ReviewSlide,
   Download,
   Footer,
+  FloatingBtn,
+  MouseAnimation,
 } from 'components';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({duration: 1500});
+  }, [])
   return (
     <>
       <Head>
@@ -33,6 +40,8 @@ export default function Home() {
         <ReviewSlide />
         <Download />
         <Footer />
+        <FloatingBtn/>
+        <MouseAnimation/>
       </Container>
     </>
   );

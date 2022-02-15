@@ -32,6 +32,9 @@ https://620be056e92d7e0008d3ebf0--lucid-yonath-e29dc7.netlify.app/
 ⚜ 박민주
 * ReadingBook, DiaryBook, Books, Bookmarks, Download, Footer UI 구현 및 반응형 적용
 * Books 컴포넌트에서 react-slick으로 인피니트 슬라이드 기능 구현
+* main 컴포넌트에서 mouse animation 적용
+* 모든 컴포넌트에 aos로 fade-up 적용
+* floatingButton 구현
   
 ⚜ 윤예나
 * 프로젝트 초반 세팅 (Typescript, Prettier, eslint, Cypress)
@@ -50,27 +53,40 @@ https://620be056e92d7e0008d3ebf0--lucid-yonath-e29dc7.netlify.app/
 
 ```bash
 .
-├── App.tsx
-├── assets      # icons, images
-├── components
-│   ├── Login
-│   ├── messageCard
-│   └── messageModal
-├── hooks
-│   ├── useBlockScroll
-│   ├── useBottomScroll
-│   └── useControlModal  
+├── components              # 프로젝트 구성 컴포넌트
+│   ├── Books
+│       ├── BookList.tsx
+│       ├── Books.tsx
+│       └── BooksCarousel.tsx
+│   ├──  ReviewSlide
+│       ├── ReviewCarousel.tsx
+│       ├── ReviewList.tsx
+│       ├── ReviewThumbnail.tsx
+│       ├── ReviewThumbCarousel.tsx
+│       └── ReviewSlide.tsx
+│   ├── Bookmarks.tsx
+│   ├── Checks.tsx
+│   ├── DiaryBook.tsx
+│   ├── Download.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Intro.tsx
+│   ├── Main.tsx
+│   ├── ReadingBook.tsx
+│   └── Video.tsx
+├── cypress               # e2e Test
 ├── pages
-│   └── Main
-├── store     # redux 구성 파일
-│   ├── actions   # redux action
-│   ├── data.ts   # 대화목록 data
-│   └── reducers
-│       ├── auth.ts     # 사용자 reducer
-│       ├── message.ts  # 대화 목록 reducer
-│       └── utils       # reducer 관련 utils 함수
-├── types     # typescript type 선언 파일
-└── utils     # 자주 사용하는 함수
+│   ├──  _app.tsx         # css, 레이아웃 구성
+│   ├──  _document.tsx
+│   └──  index.tsx        # 프로젝트 구성 페이지
+├── public                # images, gif, mp4
+│       ├── images
+│       ├── movies
+├── styles                # 글로벌 css 적용
+│   ├── global-styles.ts
+│   ├── global.css
+│   └── theme.ts
+└── utils
 ```
 
 
