@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import Main from 'components/Main';
 import Intro from 'components/Intro';
+import Video from 'components/Video';
 
 export default function Home() {
   const [text, setText] = useState<string>('자바스크립트');
@@ -19,6 +20,7 @@ export default function Home() {
       <Container>
         <Main />
         <Intro />
+        <Video />
       </Container>
     </div>
   );
