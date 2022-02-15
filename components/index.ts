@@ -3,6 +3,21 @@ import Header from './Header';
 import Intro from './Intro';
 import Video from './Video';
 import Checks from './Checks';
+import ReadingBook from './ReadingBook';
+import DiaryBook from './DiaryBook';
 import SlideOverlay from './SlideOverlay';
+import Download from './Download';
+import Footer from './Footer';
 
-export { Main, Header, Intro, Video, Checks, SlideOverlay };
+export {
+  Main,
+  Header,
+  Intro,
+  Video,
+  Checks,
+  ReadingBook,
+  DiaryBook,
+  SlideOverlay,
+  Download,
+  Footer,
+};
