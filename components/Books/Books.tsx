@@ -60,23 +60,14 @@ const TitleBox = styled.div`
 `
 
 const Title = styled.div`
-  white-space: pre-wrap;
   font-size: 30px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.47;
-  letter-spacing: normal;
   text-align: center;
   color: rgb(51, 51, 51);
 }
 
-  @media (min-width: 1200px){
-    font-size: 50px;
-    line-height: 1.44;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px){
     font-size: 50px;
     line-height: 1.44;
   }
@@ -84,23 +75,13 @@ const Title = styled.div`
 
 const SubTitle = styled.div`
   padding-top: 50px;
-  white-space: pre-wrap;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.75;
-  letter-spacing: normal;
   text-align: center;
   color: rgb(51, 51, 51);
 }
 
-  @media (min-width: 1200px){
-    font-size: 24px;
-    line-height: 1.67;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px){
     font-size: 24px;
     line-height: 1.67;
   }

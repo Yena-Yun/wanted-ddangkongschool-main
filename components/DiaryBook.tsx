@@ -42,7 +42,7 @@ const InnerContainner = styled.div`
   padding-right: 20px;
   width: 100%;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -50,7 +50,7 @@ const InnerContainner = styled.div`
     margin: 0px auto;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -59,36 +59,21 @@ const InnerContainner = styled.div`
 `
 
 const Header = styled.div`
-  white-space: pre-wrap;
   text-align: center;
-  /* font-weight: bold; */
 `
 
 const Title = styled.div`
-  white-space: pre-wrap;
-  text-align: center;
   font-weight: bold;
 
-  @media (min-width: 1200px){
-    font-size: 50px;
-    line-height: 1.44;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 50px;
     line-height: 1.44;
   }
 `
 const SubTitle = styled.header`
   padding-top: 50px;
-  white-space: pre-wrap;
 
-  @media (min-width: 1200px){
-    font-size: 24px;
-    line-height: 1.67;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 24px;
     line-height: 1.67;
   }
@@ -103,12 +88,12 @@ const DeskTopImg = styled.img`
   width: 360px;
   height: 345px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     width: 1288px;
     height: 1014px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 873px;
     height: 686px;
   }

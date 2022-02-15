@@ -43,7 +43,7 @@ const InnerContainner = styled.div`
   padding-right: 20px;
   width: 100%;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -51,7 +51,7 @@ const InnerContainner = styled.div`
     margin: 0px auto;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -60,58 +60,53 @@ const InnerContainner = styled.div`
 `
 
 const Header = styled.div`
-  white-space: pre-wrap;
   text-align: center;
-  /* font-weight: bold; */
 `
 
 const Title = styled.div`
-  white-space: pre-wrap;
-  text-align: center;
   font-weight: bold;
 
-  @media (min-width: 1200px){
-    font-size: 50px;
-    line-height: 1.44;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px){
     font-size: 50px;
     line-height: 1.44;
   }
 `
 const SubTitle = styled.header`
   padding-top: 50px;
-  white-space: pre-wrap;
 
-  @media (min-width: 1200px){
-    font-size: 24px;
-    line-height: 1.67;
-  }
-
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px){
     font-size: 24px;
     line-height: 1.67;
   }
 `
 
 const ImgBox = styled.div`
-  margin-bottom: 97px;
+  margin-bottom: 83px;
+
+  @media screen and (min-width: 1200px){
+    margin-bottom: 97px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    margin-bottom: 112px;
+  }
+  
 `
 
 const DeskTopImg = styled.img`
   flex-direction: row;
   position: relative;
-  left: -98px;
-  width: 1124px;
-  height: 885px;
+  left: -10px;
+  width: 323px;
+  height: 277px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    left: -78px;
     width: 1124px;
     height: 885px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 658px;
     height: 548px;
   }
@@ -119,17 +114,23 @@ const DeskTopImg = styled.img`
 
 const MobileImg = styled.img`
   position: absolute;
-  top: 77px;
-  left: 554px;
+  top: 49px;
+  left: 209px;
+  width: 132px;
+  height: 240px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    top: 77px;
+    left: 554px;
     width: 823px;
     height: 851px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 505px;
     height: 527px;
+    top: 47px;
+    left: 305px;
   }
 `
 export default ReadingBook;
