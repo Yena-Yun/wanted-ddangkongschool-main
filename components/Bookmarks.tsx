@@ -34,7 +34,7 @@ const Bookmarks = () => {
               </LeftMark>
             </Marks>
             <Marks>
-              <MidMark data-aos="fade-up" data-aos-delay="150">
+              <MidMark data-aos="fade-up" data-aos-delay="300">
                 <MidMarkImg src="/images/marks/mark2.png" alt="DeskTopImg"/>
                 <TitleBox>
                   <Title>양방향</Title>
@@ -53,7 +53,7 @@ const Bookmarks = () => {
               </MidMark>
             </Marks>
             <Marks>
-              <RightMark data-aos="fade-up" data-aos-delay="300">
+              <RightMark data-aos="fade-up" data-aos-delay="450">
                 <RightMarkImg src="/images/marks/mark3.png" alt="DeskTopImg"/>
                 <TitleBox>
                   <Title>캐릭터</Title>
