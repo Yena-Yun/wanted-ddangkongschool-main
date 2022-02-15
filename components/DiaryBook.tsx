@@ -9,8 +9,18 @@ const DiaryBook = () => {
         <Header>
           <Title>매일 매일 <br />
           알아서 기록하는 독서 일기</Title>
+          <TabTitle>매일 매일 알아서 <br />
+          기록하는 독서 일기</TabTitle>
           <SubTitle>오늘은 아이가 어떤 책을 읽었는지, 어떤 활동에 참여했는지 독서일기를 통해 확인해보세요. <br />
           읽기만 해도 자동으로 기록되고, 공유도 가능해요.</SubTitle>
+          <TabSubTitle>오늘은 아이가 어떤 책을 읽었는지, 어떤 활동에 참여했는지 <br />
+          독서일기를 통해 확인해보세요. <br />
+          읽기만 해도 자동으로 기록되고, 공유도 가능해요.</TabSubTitle>
+          <MobileSubTitle>오늘은 아이가 어떤 책을 읽었는지, <br />
+          어떤 활동에 참여했는지 <br />
+          독서일기를 통해 확인해보세요. <br />
+          읽기만 해도 자동으로 기록되고, <br />
+          공유도 가능해요.</MobileSubTitle>
         </Header>
         <ImgBox>
           <DeskTopImg src="/images/style6.png" alt="DeskTopImg"/>
@@ -32,7 +42,7 @@ const Contaniner = styled.div`
 `
 
 const InnerContainner = styled.div`
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -43,6 +53,7 @@ const InnerContainner = styled.div`
   width: 100%;
 
   @media screen and (min-width: 1200px){
+    padding-top: 150px;
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -51,6 +62,7 @@ const InnerContainner = styled.div`
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
+    padding-top: 150px;
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -63,22 +75,63 @@ const Header = styled.div`
 `
 
 const Title = styled.div`
-  font-weight: bold;
+  display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px){
+    display: block;
     font-size: 50px;
     line-height: 1.44;
+    font-weight: bold;
   }
 `
-const SubTitle = styled.header`
-  padding-top: 50px;
 
-  @media (min-width: 768px) {
+const TabTitle = styled.div`
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.47;
+    color: rgb(51, 51, 51);
+  }
+`
+
+const SubTitle = styled.header`
+  display: none;
+
+  @media (min-width: 1200px){
+    display: block;
+    padding-top: 50px;
     font-size: 24px;
     line-height: 1.67;
+    color: rgb(51, 51, 51);
   }
 `
 
+const TabSubTitle = styled.div`
+  display: none;
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    display: block;
+    padding-top: 50px;
+    font-size: 24px;
+    line-height: 1.67;
+    color: rgb(51, 51, 51);
+  }
+`
+
+const MobileSubTitle = styled.div`
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
+    padding-top: 27px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgb(51, 51, 51);
+  }
+`
 const ImgBox = styled.div`
   margin-top: 0px;
   margin-bottom: 47px;

@@ -97,13 +97,13 @@ const Img = styled.img`
   @media screen and (min-width: 1200px){
     margin-left: 50px;
     height: 250px;
-    width: 200px !important;
+    width: 188px !important;
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
     margin-left: 50px;
     height: 250px;
-    width: 200px !important;
+    width: 188px !important;
   }
 `
 

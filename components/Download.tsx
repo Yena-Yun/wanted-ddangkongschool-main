@@ -63,7 +63,7 @@ const Contaniner = styled.div`
 `
 
 const InnerContainner = styled.div`
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -74,6 +74,7 @@ const InnerContainner = styled.div`
   width: 100%;
 
   @media screen and (min-width: 1200px){
+    padding-top: 150px;
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -82,6 +83,7 @@ const InnerContainner = styled.div`
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
+    padding-top: 150px;
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -94,8 +96,10 @@ const Header = styled.div`
 `
 
 const Title = styled.div`
-  text-align: center;
+  font-size: 30px;
   font-weight: bold;
+  line-height: 0.8;
+  color: rgb(51, 51, 51);
 
   @media screen and (min-width: 1200px){
     font-size: 50px;
@@ -123,7 +127,14 @@ const TicketImgBox = styled.div`
     margin-bottom: 80px;
   }
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 950px) and (max-width: 1200px) {
+    flex-direction: row;
+    width: 994px;
+    height: 534px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 768px) and (max-width: 950px) {
     flex-direction: row;
     width: 808px;
     height: 534px;
@@ -142,6 +153,7 @@ const TicketImg = styled.img`
     display: block;
   }
 `
+
 const MobileTicketImg = styled.img`
   display: none;
 
@@ -169,7 +181,13 @@ const InnerTicketImgBox = styled.div`
     padding-top: 124px;
   }
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 950px) and (max-width: 1200px) {
+    width: 572px;
+    padding-left: 79px;
+    padding-top: 124px;
+  }
+
+  @media (min-width: 768px) and (max-width: 950px) {
     width: 407px;
     padding-left: 66px;
     padding-top: 124px;
@@ -219,12 +237,21 @@ const Bottom = styled.div`
     color: rgb(51, 51, 51);
     display: block;
   }
+
+  @media (min-width: 950px) and (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    display: block;
+  }
+
 `
 
 const MobileBottom = styled.div`
   display: none;
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 768px) and (max-width: 950px) {
     font-size: 20px;
     line-height: 1.8;
     text-align: center;
@@ -257,7 +284,13 @@ const DownloadImgSection = styled.div`
     align-items: flex-start;
   }
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 950px) and (max-width: 1200px) {
+    flex: initial;
+    padding-left: 74px;
+    padding-top: 182px;
+  }
+
+  @media (min-width: 768px) and (max-width: 950px) {
     padding-left: 60px;
     padding-top: 198px;
     margin-right: 25px;
