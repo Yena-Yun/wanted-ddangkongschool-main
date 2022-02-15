@@ -119,6 +119,7 @@ const TabSubTitle = styled.div`
 `
 
 const ImgBox = styled.div`
+  position: relative;
   margin-bottom: 83px;
 
   @media screen and (min-width: 1200px){
