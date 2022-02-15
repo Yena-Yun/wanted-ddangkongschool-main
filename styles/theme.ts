@@ -1,13 +1,14 @@
 import { DefaultTheme } from 'styled-components';
 
-const responsive = {
+const media = {
   desktop: '1200px',
-  ipad: '768px',
+  tablet: '768px',
 };
 
 const color: DefaultTheme = {
+  primary: '#fdc441',
+  default: '#333333',
   white: '#fff',
-  black: '#000',
 };
 
 const common: DefaultTheme = {
@@ -18,12 +19,12 @@ const common: DefaultTheme = {
 	`,
   flexColumn: `
 		display: flex;
-		flex-direction: column
+		flex-direction: column;
 	`,
 };
 
 const theme = {
-  responsive,
+  media,
   color,
   common,
 };
