@@ -59,6 +59,8 @@ const Contaniner = styled.div`
   align-items: center;
   margin: 0px auto;
   text-align: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
 `
 
 const InnerContainer = styled.div`
@@ -68,8 +70,6 @@ const InnerContainer = styled.div`
   -webkit-box-align: center;
   align-items: center;
   align-self: center;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 100%;
 
   @media screen and (min-width: 1200px){
@@ -140,6 +140,7 @@ const Company = styled.div`
 
 const CompanyInfoBox = styled.div`
   margin: 20px 0px;
+  line-height: normal;
 `
 
 const AboutCompany = styled.div`

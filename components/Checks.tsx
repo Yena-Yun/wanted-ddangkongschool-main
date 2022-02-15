@@ -8,12 +8,12 @@ const Checks = () => {
   return (
     <Wrapper>
       <TextWrap>
-        <Title>
+        <Title data-aos="fade-up">
           교육 전문가들이
           <br />
           선정한 도서
         </Title>
-        <Content>
+        <Content data-aos="fade-up">
           호두랩스의 교육 전문가들이 <br />
           교과 수록, 초등 필독 도서 등 <br />
           아동 교육에 적합한 도서를 <br />
@@ -27,6 +27,7 @@ const Checks = () => {
               {checkArr.map((check, idx) => (
                 <Check key={idx}>
                   <CheckAni
+                    data-aos="fade-up" data-aos-delay="100"
                     src={`/images/checks/check${idx + 1}.gif`}
                     width={150}
                     height={110}

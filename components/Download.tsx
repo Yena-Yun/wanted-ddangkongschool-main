@@ -6,7 +6,7 @@ const Download = () => {
     <Contaniner>
       <InnerContainner>
         <Header>
-          <Title>지금 다운로드 받으세요!</Title>
+          <Title data-aos="fade-up">지금 다운로드 받으세요!</Title>
         </Header>
         <TicketImgBox>
           <TicketImg src="/images/style10_1.png" alt="TicketImg"/>

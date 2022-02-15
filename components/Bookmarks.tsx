@@ -9,14 +9,14 @@ const Bookmarks = () => {
         <Section>
           <HeaderSection>
             <HeaderBox>
-              <Header>
+              <Header data-aos="fade-up">
                 땅콩스쿨만의 특징
               </Header>
             </HeaderBox>
           </HeaderSection>
           <MarksSection>
             <Marks>
-              <LeftMark>
+              <LeftMark data-aos="fade-up">
                 <LeftMarkImg src="/images/marks/mark1.png" alt="FirMarkImg"/>
                 <TitleBox>
                   <Title>화상수업</Title>
@@ -34,7 +34,7 @@ const Bookmarks = () => {
               </LeftMark>
             </Marks>
             <Marks>
-              <MidMark>
+              <MidMark data-aos="fade-up" data-aos-delay="150">
                 <MidMarkImg src="/images/marks/mark2.png" alt="DeskTopImg"/>
                 <TitleBox>
                   <Title>양방향</Title>
@@ -53,7 +53,7 @@ const Bookmarks = () => {
               </MidMark>
             </Marks>
             <Marks>
-              <RightMark>
+              <RightMark data-aos="fade-up" data-aos-delay="300">
                 <RightMarkImg src="/images/marks/mark3.png" alt="DeskTopImg"/>
                 <TitleBox>
                   <Title>캐릭터</Title>
