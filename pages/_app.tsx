@@ -2,14 +2,20 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/global-styles';
 import theme from '../styles/theme';
-import Style5 from 'src/component/Style5';
+import ReadingBook from 'src/component/ReadingBook';
+import DiaryBook from 'src/component/DiaryBook';
+import Download from 'src/component/Download';
+import Footer from 'src/component/footer';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Component {...pageProps} />
-      <Style5/>
+      <ReadingBook/>
+      <DiaryBook/>
+      <Download/>
+      <Footer/>
     </ThemeProvider>
   );
 }
