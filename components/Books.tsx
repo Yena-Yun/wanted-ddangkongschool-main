@@ -1,0 +1,133 @@
+import React from 'react';
+import styled from 'styled-components';
+
+export default function Books() {
+
+  return (
+    <Contaniner>
+      <InnerContainner>
+        <Header>
+          <TitleBox>
+            <div>
+              <Title>입학 전 1000권 읽기! 땅콩스쿨로 도전해보세요.</Title>
+            </div>
+          </TitleBox>
+          <TitleBox>
+            <div>
+              <SubTitle>매달 새로운 32권의 어린이 베스트 셀러를 만날 수 있어요. 독서를 통해 배움의 즐거움을 알아가 보세요.</SubTitle>
+            </div>
+          </TitleBox>
+        </Header>
+        <Content>
+          <BookSection>
+            <Book>
+
+            </Book>
+          </BookSection>
+        </Content>
+      </InnerContainner>
+    </Contaniner>
+  );
+}
+
+const Contaniner = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px auto;
+`
+
+const InnerContainner = styled.div`
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px auto;
+`
+
+const Header = styled.div`
+  margin-top: 150px;
+`
+
+const TitleBox = styled.div`
+  top: 0px;
+  opacity: 1;
+`
+
+const Title = styled.div`
+  white-space: pre-wrap;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+  @media (min-width: 1200px){
+    font-size: 50px;
+    line-height: 1.44;
+  }
+
+  @media screen and(min-width: 768px) {
+    font-size: 50px;
+    line-height: 1.44;
+  }
+`
+
+const SubTitle = styled.div`
+  padding-top: 50px;
+  white-space: pre-wrap;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+  @media (min-width: 1200px){
+    font-size: 24px;
+    line-height: 1.67;
+  }
+
+  @media screen and(min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.67;
+  }
+`
+
+const Content = styled.div`
+  margin-bottom: 150px;
+  margin-top: 100px;
+  text-align: center;
+  overflow-x: hidden;
+`
+
+const BookSection = styled.div`
+  height: 135px;
+  width: 1755px;
+  text-align: left;
+
+  @media (min-width: 1200px){
+    height: 250px;
+    width: 3570px;
+  }
+
+  @media screen and(min-width: 768px) {
+    height: 250px;
+    width: 3570px;
+  }
+`
+
+const Book = styled.div`
+`
