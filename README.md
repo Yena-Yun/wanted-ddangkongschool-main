@@ -30,7 +30,8 @@
 ## 4. 구현 기능
 
 ⚜ 박민주
-
+* ReadingBook, DiaryBook, Books, Bookmarks, Download, Footer UI 구현 및 반응형 적용
+* Books 컴포넌트에서 react-slick으로 인피니트 슬라이드 기능 구현
   
 ⚜ 윤예나
 * 프로젝트 초반 세팅 (Typescript, Prettier, eslint, Cypress)
