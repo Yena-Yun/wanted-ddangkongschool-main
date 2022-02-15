@@ -1,8 +1,6 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import Slider, { Settings } from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 interface sliderProps {
   children: React.ReactNode;
@@ -12,9 +10,13 @@ interface sliderProps {
   infinite?: boolean;
   cssEase?: string;
   autoplaySpeed?: number;
+  arrows?: boolean;
 }
 
-const ReviewCarousel = ({ children, autoplay = false }: sliderProps) => {
+const ReviewThumbnailCarousel = ({
+  children,
+  autoplay = true,
+}: sliderProps) => {
   const settings = useMemo<Settings>(
     () => ({
       cssEase: 'linear',
@@ -22,6 +24,7 @@ const ReviewCarousel = ({ children, autoplay = false }: sliderProps) => {
       slidesToShow: 1,
       autoplay: Boolean(autoplay),
       autoplaySpeed: 3000,
+      arrows: false,
     }),
     [autoplay]
   );
@@ -38,7 +41,9 @@ const SlideWrapper = styled.div`
 `;
 
 const StyledSlider = styled(Slider)`
-  padding: 0 40px;
+  width: 97px;
+  height: 97px;
+  border-radius: 50%;
 `;
 
-export default ReviewCarousel;
+export default ReviewThumbnailCarousel;
