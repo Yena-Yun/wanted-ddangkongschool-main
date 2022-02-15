@@ -5,7 +5,9 @@ import Video from './Video';
 import Checks from './Checks';
 import ReadingBook from './ReadingBook';
 import DiaryBook from './DiaryBook';
-import SlideOverlay from './SlideOverlay';
+import ReviewSlide from './ReviewSlide/ReviewSlide';
+import ReviewList from './ReviewSlide/ReviewList';
+import SlideBtn from './ReviewSlide/SlideBtn';
 import Download from './Download';
 import Footer from './Footer';
 
@@ -17,7 +19,9 @@ export {
   Checks,
   ReadingBook,
   DiaryBook,
-  SlideOverlay,
+  ReviewSlide,
+  ReviewList,
+  SlideBtn,
   Download,
   Footer,
 };
