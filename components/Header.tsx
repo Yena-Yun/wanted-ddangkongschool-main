@@ -8,14 +8,16 @@ const Header = () => {
       <LogoWrap>
         <Image src="/images/logo.png" width={150} height={50} alt="logo" />
       </LogoWrap>
-      <MenuList>
-        <MenuItem>도서 구매</MenuItem>
-        <MenuItem>장바구니</MenuItem>
-        <MenuItem>마이페이지</MenuItem>
-        <Divider></Divider>
-        <MenuItem>이용권 관리</MenuItem>
-        <MenuItem>로그인/회원가입</MenuItem>
-      </MenuList>
+      <nav>
+        <MenuList>
+          <MenuItem>도서 구매</MenuItem>
+          <MenuItem>장바구니</MenuItem>
+          <MenuItem>마이페이지</MenuItem>
+          <Divider></Divider>
+          <MenuItem>이용권 관리</MenuItem>
+          <MenuItem>로그인/회원가입</MenuItem>
+        </MenuList>
+      </nav>
     </Wrapper>
   );
 };

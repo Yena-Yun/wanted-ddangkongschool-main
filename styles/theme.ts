@@ -19,7 +19,7 @@ const common: DefaultTheme = {
 	`,
   flexColumn: `
 		display: flex;
-		flex-direction: column
+		flex-direction: column;
 	`,
 };
 

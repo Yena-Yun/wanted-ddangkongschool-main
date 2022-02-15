@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import Main from 'components/Main';
+import Intro from 'components/Intro';
 
 export default function Home() {
   const [text, setText] = useState<string>('자바스크립트');
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Container>
         <Main />
+        <Intro />
       </Container>
     </div>
   );
