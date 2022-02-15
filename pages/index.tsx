@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Main from 'components/Main';
-import Intro from 'components/Intro';
-import Video from 'components/Video';
-import Checks from 'components/Checks';
+import { Main, Intro, Video, Checks, SlideOverlay } from 'components';
 import ReadingBook from 'src/component/ReadingBook';
 import DiaryBook from 'src/component/DiaryBook';
 import Download from 'src/component/Download';
@@ -27,6 +24,7 @@ export default function Home() {
         <Intro />
         <Video />
         <Checks />
+        <SlideOverlay />
         <ReadingBook/>
         <DiaryBook/>
         <Download/>
