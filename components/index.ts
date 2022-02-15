@@ -12,7 +12,8 @@ import Books from './Books/Books';
 import Bookmarks from './Bookmarks';
 import Download from './Download';
 import Footer from './Footer';
-import FloatingBtn from './floatingBtn';
+import FloatingBtn from './FloatingBtn';
+import MouseAnimation from './MouseAnimation'
 
 
 export {
@@ -31,4 +32,5 @@ export {
   Download,
   Footer,
   FloatingBtn,
+  MouseAnimation,
 };
