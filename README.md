@@ -8,7 +8,7 @@
 
 ## 2. 배포 링크
 
-https://620be056e92d7e0008d3ebf0--lucid-yonath-e29dc7.netlify.app/
+https://lucid-yonath-e29dc7.netlify.app/
 
 
 ## 3. 팀원 소개
