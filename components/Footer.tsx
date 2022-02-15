@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Footer() {
+const Footer = () => {
 
   return (
     <Contaniner>
@@ -293,7 +293,7 @@ const LogoImg = styled.img`
     height: 60px;
   }
 `
-
+export default Footer;
 
 
 

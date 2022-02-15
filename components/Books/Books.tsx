@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import BookList from './BookList';
 
-export default function Books() {
+const Books = () => {
 
   return (
     <Contaniner>
@@ -19,11 +20,8 @@ export default function Books() {
           </TitleBox>
         </Header>
         <Content>
-          <BookSection>
-            <Book>
-
-            </Book>
-          </BookSection>
+          {/* Book List */}
+          <BookList/>
         </Content>
       </InnerContainner>
     </Contaniner>
@@ -113,21 +111,4 @@ const Content = styled.div`
   overflow-x: hidden;
 `
 
-const BookSection = styled.div`
-  height: 135px;
-  width: 1755px;
-  text-align: left;
-
-  @media (min-width: 1200px){
-    height: 250px;
-    width: 3570px;
-  }
-
-  @media screen and(min-width: 768px) {
-    height: 250px;
-    width: 3570px;
-  }
-`
-
-const Book = styled.div`
-`
+export default Books;

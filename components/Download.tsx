@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Download() {
+const Download = () => {
 
   return (
     <Contaniner>
@@ -283,6 +283,6 @@ const DownloadDesc = styled.div`
     line-height: 1;
   }
 `
-
+export default Download;
 
 

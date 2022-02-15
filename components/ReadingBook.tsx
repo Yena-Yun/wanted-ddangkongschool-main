@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function ReadingBook() {
+const ReadingBook = () => {
 
   return (
     <Contaniner>
@@ -130,4 +130,4 @@ const MobileImg = styled.img`
     height: 527px;
   }
 `
-
+export default ReadingBook;

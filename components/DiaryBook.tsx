@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function DiaryBook() {
+const DiaryBook = () => {
 
   return (
     <Contaniner>
@@ -111,3 +111,5 @@ const DeskTopImg = styled.img`
     height: 686px;
   }
 `
+
+export default DiaryBook;
