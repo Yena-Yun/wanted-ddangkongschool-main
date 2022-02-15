@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Download = () => {
-
   return (
     <Contaniner>
       <InnerContainner>
@@ -11,6 +10,7 @@ const Download = () => {
         </Header>
         <TicketImgBox>
           <TicketImg src="/images/style10_1.png" alt="TicketImg"/>
+          <MobileTicketImg src="/images/style10_3.png" alt="MobileTicketImg"/>
           <InnerTicketImgBox>
             <LogoImgBox>
               <LogoImg src="/images/style10_2.png" alt="LogoImg"/>
@@ -25,20 +25,24 @@ const Download = () => {
             <Bottom>
               지금 가입하시면 매주 8권의 동화책을 보실 수 있어요!
             </Bottom>
+            <MobileBottom>
+              지금 가입하시면 <br />
+              매주 8권의 동화책을 보실 수 있어요!
+            </MobileBottom>
           </InnerBottom>
           </InnerTicketImgBox>
           <DownloadImgSection>
-            <SignupDescBox>
+            <div>
             <SignupDesc>
               회원가입에 걸리는 시간 단 3초
             </SignupDesc>
-            </SignupDescBox>
+            </div>
             <DownloadBox>
-              <DownloadDescBox>
+              <div>
                 <DownloadDesc>
                   앱 다운로드 하기
                 </DownloadDesc> 
-              </DownloadDescBox>
+              </div>
             </DownloadBox>
           </DownloadImgSection>
         </TicketImgBox>
@@ -59,7 +63,7 @@ const Contaniner = styled.div`
 `
 
 const InnerContainner = styled.div`
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -69,7 +73,8 @@ const InnerContainner = styled.div`
   padding-right: 20px;
   width: 100%;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    padding-top: 150px;
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -77,7 +82,8 @@ const InnerContainner = styled.div`
     margin: 0px auto;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    padding-top: 150px;
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -86,21 +92,21 @@ const InnerContainner = styled.div`
 `
 
 const Header = styled.div`
-  white-space: pre-wrap;
   text-align: center;
 `
 
 const Title = styled.div`
-  white-space: pre-wrap;
-  text-align: center;
+  font-size: 30px;
   font-weight: bold;
+  line-height: 0.8;
+  color: rgb(51, 51, 51);
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     font-size: 50px;
     line-height: 1.44;
   }
 
-  @media screen and(max-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     font-size: 50px;
     line-height: 1.44;
   }
@@ -108,29 +114,56 @@ const Title = styled.div`
 
 const TicketImgBox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 360px;
   height: 613px;
   margin-top: 60px;
   margin-bottom: 116px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    flex-direction: row;
     width: 1240px;
     height: 534px;
+    margin-bottom: 80px;
   }
 
-  @media screen and(min-width: 768px){
-    width: 808px;
+  @media (min-width: 950px) and (max-width: 1200px) {
+    flex-direction: row;
+    width: 994px;
     height: 534px;
     margin-bottom: 80px;
+  }
+
+  @media (min-width: 768px) and (max-width: 950px) {
+    flex-direction: row;
+    width: 808px;
+    height: 534px;
+    margin-bottom: 80px;    
   }
 `
 
 const TicketImg = styled.img`
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+  display: none;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+`
+
+const MobileTicketImg = styled.img`
+  display: none;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 `
 
 const InnerTicketImgBox = styled.div`
@@ -142,13 +175,19 @@ const InnerTicketImgBox = styled.div`
   padding-top: 94px;
   padding-left: 0px;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px){
     width: 640px;
     padding-left: 140px;
     padding-top: 124px;
   }
 
-  @media screen and(min-width: 768px){
+  @media (min-width: 950px) and (max-width: 1200px) {
+    width: 572px;
+    padding-left: 79px;
+    padding-top: 124px;
+  }
+
+  @media (min-width: 768px) and (max-width: 950px) {
     width: 407px;
     padding-left: 66px;
     padding-top: 124px;
@@ -173,7 +212,6 @@ const InnerSection = styled.div`
   padding-top: 19px;
 `
 const Section = styled.div`
-  white-space: pre-wrap;
   font-family: S-CoreDream-3;
   font-size: 36px;
   text-align: center;
@@ -184,56 +222,92 @@ const Section = styled.div`
   }
 `
 const InnerBottom = styled.div`
-  padding-top: 20px;
+  @media (min-width: 768px) {
+    padding-top: 20px;
+  }
 `
-const Bottom = styled.div`
-  white-space: pre-wrap;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.8;
-  text-align: center;
-  color: rgb(51, 51, 51);
 
-  @media (min-width: 768px){
+const Bottom = styled.div`
+  display: none;
+
+  @media (min-width: 1200px){
     font-size: 20px;
     line-height: 1.8;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    display: block;
+  }
+
+  @media (min-width: 950px) and (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    display: block;
+  }
+
+`
+
+const MobileBottom = styled.div`
+  display: none;
+
+  @media (min-width: 768px) and (max-width: 950px) {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    display: block;
+  }
+
+  @media (max-width: 768px){
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    display: block;
   }
 `
 
 const DownloadImgSection = styled.div`
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   flex: 1 1 0%;
   display: flex;
   z-index: 2;
   padding-top: 107px;
+  margin-left: 0;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px){
     padding-left: 177px;
+    padding-top: 182px;
+    margin-right: 25px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 950px) and (max-width: 1200px) {
+    flex: initial;
+    padding-left: 74px;
     padding-top: 182px;
   }
 
-  @media screen and(min-width: 768px){
+  @media (min-width: 768px) and (max-width: 950px) {
     padding-left: 60px;
     padding-top: 198px;
+    margin-right: 25px;
+    align-items: flex-start;
+    margin-left: 20px;
   }
 `
 
-const SignupDescBox = styled.div`
-  margin-left: 16px;
-`
-
 const SignupDesc = styled.div`
-  white-space: pre-wrap;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.71;
   text-align: center;
   color: rgb(51, 51, 51);
+
+  @media screen and (min-width: 1200px){
+    margin-left: 20px;
+  }
 
   @media (min-width: 768px){
     font-size: 20px;
@@ -254,28 +328,21 @@ const DownloadBox = styled.div`
   margin-top: 30px;
   border-radius: 10px;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px){
     width: 282px;
     height: 80px;
   }
 
-  @media screen and(min-width: 768px){
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 250px;
     height: 80px;
   }
 `
 
-const DownloadDescBox = styled.div`
-`
-
 const DownloadDesc = styled.div`
-  white-space: pre-wrap;
   font-size: 14px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.71;
-  letter-spacing: normal;
   text-align: center;
   color: rgb(255, 255, 255);
 

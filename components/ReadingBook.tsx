@@ -8,9 +8,15 @@ const ReadingBook = () => {
       <InnerContainner>
         <Header>
           <Title>실시간 방송 형태로 제공되는 <br />
-           신개념 책 읽기</Title>
+          신개념 책 읽기</Title>
+          <TabTitle>실시간 방송 형태로 <br />
+          제공되는 <br />
+          신개념 책 읽기</TabTitle>
           <SubTitle>방송 중이라면 언제든 접속하세요. <br />
           수강신청, 수업예약 없이 편하게 수업참여가 가능해요.</SubTitle>
+          <TabSubTitle>방송 중이라면 언제든 접속하세요. <br />
+          수강신청, 수업예약 없이 <br />
+          편하게 수업참여가 가능해요.</TabSubTitle>
         </Header>
         <ImgBox>
           <DeskTopImg src="/images/style5_1.png" alt="DeskTopImg"/>
@@ -33,7 +39,7 @@ const Contaniner = styled.div`
 `
 
 const InnerContainner = styled.div`
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -43,7 +49,8 @@ const InnerContainner = styled.div`
   padding-right: 20px;
   width: 100%;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    padding-top: 150px;
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -51,7 +58,8 @@ const InnerContainner = styled.div`
     margin: 0px auto;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    padding-top: 150px;
     width: 100%;
     max-width: 768px;
     padding-left: 30px;
@@ -60,58 +68,85 @@ const InnerContainner = styled.div`
 `
 
 const Header = styled.div`
-  white-space: pre-wrap;
   text-align: center;
-  /* font-weight: bold; */
 `
 
 const Title = styled.div`
-  white-space: pre-wrap;
-  text-align: center;
-  font-weight: bold;
+  display: none;
 
-  @media (min-width: 1200px){
+  @media (min-width: 768px){
+    display: block;
     font-size: 50px;
     line-height: 1.44;
-  }
-
-  @media screen and(min-width: 768px) {
-    font-size: 50px;
-    line-height: 1.44;
+    font-weight: bold;
   }
 `
-const SubTitle = styled.header`
-  padding-top: 50px;
-  white-space: pre-wrap;
 
-  @media (min-width: 1200px){
-    font-size: 24px;
-    line-height: 1.67;
+const TabTitle = styled.div`
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.47;
+    color: rgb(51, 51, 51);
   }
+`
 
-  @media screen and(min-width: 768px) {
+const SubTitle = styled.header`
+  display: none;
+
+  @media (min-width: 768px){
+    display: block;
+    padding-top: 50px;
     font-size: 24px;
     line-height: 1.67;
+    color: rgb(51, 51, 51);
+  }
+`
+
+const TabSubTitle = styled.div`
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
+    padding-top: 27px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgb(51, 51, 51);
   }
 `
 
 const ImgBox = styled.div`
-  margin-bottom: 97px;
+  position: relative;
+  margin-bottom: 83px;
+
+  @media screen and (min-width: 1200px){
+    margin-bottom: 97px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    margin-bottom: 112px;
+  }
+  
 `
 
 const DeskTopImg = styled.img`
   flex-direction: row;
   position: relative;
-  left: -98px;
-  width: 1124px;
-  height: 885px;
+  left: -10px;
+  width: 323px;
+  height: 277px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    left: -78px;
     width: 1124px;
     height: 885px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    left: -78px;
     width: 658px;
     height: 548px;
   }
@@ -119,17 +154,23 @@ const DeskTopImg = styled.img`
 
 const MobileImg = styled.img`
   position: absolute;
-  top: 77px;
-  left: 554px;
+  top: 49px;
+  left: 209px;
+  width: 132px;
+  height: 240px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
+    top: 77px;
+    left: 554px;
     width: 823px;
     height: 851px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 505px;
     height: 527px;
+    top: 47px;
+    left: 305px;
   }
 `
 export default ReadingBook;

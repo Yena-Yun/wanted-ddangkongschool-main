@@ -72,7 +72,7 @@ const InnerContainer = styled.div`
   padding-right: 20px;
   width: 100%;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     width: 100%;
     max-width: 1200px;
     padding-left: 30px;
@@ -98,7 +98,7 @@ const FooterSectionBox = styled.div`
   background-color: rgb(255, 255, 255);
   padding: 60px 0px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     flex-direction: row;
   }
 
@@ -117,11 +117,11 @@ const FooterSection = styled.div`
   background-color: rgb(255, 255, 255);
   padding: 60px 0px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     flex-direction: row;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     padding: 100px 0px;
   }
 `
@@ -131,12 +131,6 @@ const LeftSection = styled.div`
   flex-direction: column;
   -webkit-box-pack: center;
   justify-content: center;
-
-  @media (min-width: 1200px){
-  }
-
-  @media screen and(min-width: 768px) {
-  }
 `
 
 const Company = styled.div`
@@ -162,7 +156,7 @@ const CompanyInfo = styled.div`
   opacity: 0.8;
   font-size: 12px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.71;
   }
@@ -194,7 +188,7 @@ const TextLinks = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 30px;
   }
 `
@@ -203,11 +197,11 @@ const CustomService = styled.div`
   margin-top: 26px;
   margin-bottom: 10px;
   
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     margin-top: 0px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     margin-top: 20px;
     margin-bottom: 10px;
   }
@@ -255,6 +249,7 @@ const TosMid = styled.a`
   cursor: pointer;
 
   @media (min-width: 768px) {
+    font-weight: bold;
     font-size: 16px;
     margin-right: 20px;
   }

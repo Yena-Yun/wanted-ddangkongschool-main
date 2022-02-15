@@ -52,12 +52,12 @@ const SlideWrapper = styled.div`
   height: 250px;
   width: 1755px;
 
-  @media (min-width: 1200px){
+  @media screen and (min-width: 1200px){
     height: 250px;
     width: 3570px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     height: 250px;
     width: 3570px;
   }
