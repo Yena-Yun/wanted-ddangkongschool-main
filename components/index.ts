@@ -6,6 +6,7 @@ import Checks from './Checks';
 import ReadingBook from './ReadingBook';
 import DiaryBook from './DiaryBook';
 import ReviewSlide from './ReviewSlide/ReviewSlide';
+import ReviewThumbnail from './ReviewSlide/ReviewThumbnail';
 import ReviewList from './ReviewSlide/ReviewList';
 import SlideBtn from './ReviewSlide/SlideBtn';
 import Books from './Books/Books';
@@ -22,6 +23,7 @@ export {
   ReadingBook,
   DiaryBook,
   ReviewSlide,
+  ReviewThumbnail,
   ReviewList,
   SlideBtn,
   Books,

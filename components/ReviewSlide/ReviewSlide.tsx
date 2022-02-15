@@ -1,26 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReviewList, SlideBtn } from 'components';
+import { ReviewList, ReviewThumbnail } from 'components';
 
 const ReviewSlide = () => {
   return (
     <Wrapper>
+      <ReviewThumbnail />
       <ReviewList />
-      <SlideBtn />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* position: relative; */
   width: 100vw;
   height: 703px;
-  /* padding: 159px 0 150px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-image: url('/images/slideOverlay/background.png'); */
+  background-image: url('/images/slideOverlay/background.png');
   background-position: 75% center;
   background-size: cover;
   background-repeat: no-repeat;

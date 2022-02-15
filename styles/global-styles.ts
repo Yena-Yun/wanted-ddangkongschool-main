@@ -50,16 +50,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* 
-div, span {
-  position: relative;
-  box-sizing: border-box;
-} */
-
-/* img {
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-} */
 
 `;
 
