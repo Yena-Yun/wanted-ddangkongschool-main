@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 const Video = () => {
   const lineArr = Array(14).fill(0);
@@ -37,6 +36,7 @@ const Video = () => {
 const Wrapper = styled.div`
   height: 673px;
   display: flex;
+  justify-content: center;
   position: relative;
   padding-top: 115px;
 `;

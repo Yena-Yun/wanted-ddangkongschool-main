@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Main from 'components/Main';
 import Intro from 'components/Intro';
 import Video from 'components/Video';
+import Checks from 'components/Checks';
 
 export default function Home() {
   const [text, setText] = useState<string>('자바스크립트');
@@ -21,6 +22,7 @@ export default function Home() {
         <Main />
         <Intro />
         <Video />
+        <Checks />
       </Container>
     </div>
   );
