@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import BookList from './BookList';
 
-export default function Books() {
+const Books = () => {
 
   return (
     <Contaniner>
@@ -9,21 +10,20 @@ export default function Books() {
         <Header>
           <TitleBox>
             <div>
-              <Title>입학 전 1000권 읽기! 땅콩스쿨로 도전해보세요.</Title>
+              <Title>입학 전 1000권 읽기! <br />
+              땅콩스쿨로 도전해보세요.</Title>
             </div>
           </TitleBox>
           <TitleBox>
             <div>
-              <SubTitle>매달 새로운 32권의 어린이 베스트 셀러를 만날 수 있어요. 독서를 통해 배움의 즐거움을 알아가 보세요.</SubTitle>
+              <SubTitle>매달 새로운 32권의 어린이 베스트 셀러를 만날 수 있어요. <br />
+              독서를 통해 배움의 즐거움을 알아가 보세요.</SubTitle>
             </div>
           </TitleBox>
         </Header>
         <Content>
-          <BookSection>
-            <Book>
-
-            </Book>
-          </BookSection>
+          {/* Book List */}
+          <BookList/>
         </Content>
       </InnerContainner>
     </Contaniner>
@@ -113,21 +113,4 @@ const Content = styled.div`
   overflow-x: hidden;
 `
 
-const BookSection = styled.div`
-  height: 135px;
-  width: 1755px;
-  text-align: left;
-
-  @media (min-width: 1200px){
-    height: 250px;
-    width: 3570px;
-  }
-
-  @media screen and(min-width: 768px) {
-    height: 250px;
-    width: 3570px;
-  }
-`
-
-const Book = styled.div`
-`
+export default Books;

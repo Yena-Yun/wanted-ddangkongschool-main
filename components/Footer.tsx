@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Footer() {
+const Footer = () => {
 
   return (
     <Contaniner>
@@ -174,6 +174,7 @@ const CompanyLink = styled.a`
   text-decoration: underline;
   font-size: 12px;
   line-height: 1.71;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     line-height: 1.71;
@@ -218,6 +219,7 @@ const CustomServiceLinkLeft = styled.a`
   font-weight: 500;
   font-size: 14px;
   margin-right: 16px;
+  cursor: pointer;
   
   @media (min-width: 768px) {
     font-size: 16px;
@@ -232,6 +234,7 @@ const CustomServiceLinkRight = styled.a`
   font-weight: 500;
   font-size: 14px;
   margin-right: 16px;
+  cursor: pointer;
   
   @media (min-width: 768px) {
     font-size: 16px;
@@ -249,6 +252,7 @@ const TosMid = styled.a`
   font-weight: 500;
   font-size: 14px;
   margin-right: 16px;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     font-size: 16px;
@@ -293,7 +297,7 @@ const LogoImg = styled.img`
     height: 60px;
   }
 `
-
+export default Footer;
 
 
 

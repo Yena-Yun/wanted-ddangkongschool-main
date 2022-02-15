@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Bookmarks() {
+const Bookmarks = () => {
 
   return (
     <Contaniner>
@@ -22,7 +22,9 @@ export default function Bookmarks() {
                   <Title>화상수업</Title>
                 </TitleBox>
                 <SubTitleBox>
-                  <SubTitle>휴대폰이나 태블릿으로 시간이나 장소 관계없이 편하게 수업을 들어보세요.</SubTitle>
+                  <SubTitle>휴대폰이나 태블릿으로 <br />
+                  시간이나 장소 관계없이 <br />
+                  편하게 수업을 들어보세요.</SubTitle>
                 </SubTitleBox>
               </LeftMark>
             </Marks>
@@ -30,10 +32,13 @@ export default function Bookmarks() {
               <MidMark>
                 <MidMarkImg src="/images/marks/mark2.png" alt="DeskTopImg"/>
                 <TitleBox>
-                  <Title>화상수업</Title>
+                  <Title>양방향</Title>
                 </TitleBox>
                 <SubTitleBox>
-                  <SubTitle>휴대폰이나 태블릿으로 시간이나 장소 관계없이 편하게 수업을 들어보세요.</SubTitle>
+                  <SubTitle>화면에 그림도 그려보고, <br />
+                    읽은 책으로 선생님과 <br />
+                    퀴즈도 풀어보는 양방향 <br />
+                    수업을 경험해보세요.</SubTitle>
                 </SubTitleBox>
               </MidMark>
             </Marks>
@@ -41,10 +46,12 @@ export default function Bookmarks() {
               <RightMark>
                 <RightMarkImg src="/images/marks/mark3.png" alt="DeskTopImg"/>
                 <TitleBox>
-                  <Title>화상수업</Title>
+                  <Title>캐릭터</Title>
                 </TitleBox>
                 <SubTitleBox>
-                  <SubTitle>휴대폰이나 태블릿으로 시간이나 장소 관계없이 편하게 수업을 들어보세요.</SubTitle>
+                  <SubTitle>친숙한 캐릭터와 <br />
+                    목소리로 수업에 대한 <br />
+                    부담을 낮춰보세요.</SubTitle>
                 </SubTitleBox>
               </RightMark>
             </Marks>
@@ -179,8 +186,8 @@ const LeftMarkImg = styled.img`
   height: 116px;
 `
 const TitleBox = styled.div`
-  margin-top: 50px;
   margin: 0px auto;
+  margin-top: 50px;
 `
 const Title = styled.div`
   font-weight: bold;
@@ -195,8 +202,8 @@ const Title = styled.div`
   }
 `
 const SubTitleBox = styled.div`
-  margin-top: 30px;
   margin: 0px auto;
+  margin-top: 30px;
 `
 const SubTitle = styled.div`
   white-space: pre-wrap;
@@ -273,3 +280,5 @@ const RightMarkImg = styled.img`
   width: 116px;
   height: 116px;
 `
+
+export default Bookmarks;
