@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Bookmarks() {
+const Bookmarks = () => {
 
   return (
     <Contaniner>
@@ -273,3 +273,5 @@ const RightMarkImg = styled.img`
   width: 116px;
   height: 116px;
 `
+
+export default Bookmarks;

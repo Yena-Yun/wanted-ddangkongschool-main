@@ -5,7 +5,7 @@ import Video from './Video';
 import Checks from './Checks';
 import ReadingBook from './ReadingBook';
 import DiaryBook from './DiaryBook';
-import Books from './Books';
+import Books from './Books/Books';
 import Bookmarks from './Bookmarks';
 import SlideOverlay from './SlideOverlay';
 import Download from './Download';
