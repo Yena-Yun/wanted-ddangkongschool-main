@@ -13,6 +13,7 @@ import {
   ReviewSlide,
   Download,
   Footer,
+  FloatingBtn,
 } from 'components';
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
         <ReviewSlide />
         <Download />
         <Footer />
+        <FloatingBtn/>
       </Container>
     </>
   );
