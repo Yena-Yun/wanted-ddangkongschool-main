@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
 }
 ol, ul {
 	list-style: none;
@@ -44,6 +45,16 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+div, span {
+  position: relative;
+  box-sizing: border-box;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
 }
 
 `;
