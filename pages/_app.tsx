@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import ReadingBook from 'src/component/ReadingBook';
 import DiaryBook from 'src/component/DiaryBook';
 import Download from 'src/component/Download';
-import Footer from 'src/component/footer';
+import Footer from 'src/component/Footer';
 
 function App({ Component, pageProps }: AppProps) {
   return (
