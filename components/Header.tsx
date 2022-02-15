@@ -115,6 +115,7 @@ const MenuGroup = styled.div`
 
 const Row = styled.div`
   display: flex;
+  margin-left: -150px;
 `;
 
 const IconWrap = styled.div`

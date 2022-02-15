@@ -1,17 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 const Intro = () => {
   return (
     <Wrapper>
       <Animation>
-        <Image
-          src="/movies/logo-animation.gif"
-          width={100}
-          height={70}
-          alt="logo-animation"
-        />
+        <LogoAni src={'/images/logo-animation.gif'} alt="logo-animation" />
       </Animation>
       <Title>땅콩스쿨이란?</Title>
       <Content>
@@ -35,6 +29,10 @@ const Wrapper = styled.div`
 const Animation = styled.div`
   height: 60px;
   margin-bottom: 30px;
+`;
+
+const LogoAni = styled.img`
+  height: 100%;
 `;
 
 const Title = styled.h2`

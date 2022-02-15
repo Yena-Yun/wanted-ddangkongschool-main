@@ -26,7 +26,7 @@ const Checks = () => {
             <Row>
               {checkArr.map((check, idx) => (
                 <Check key={idx}>
-                  <Image
+                  <CheckAni
                     src={`/images/checks/check${idx + 1}.gif`}
                     width={150}
                     height={110}
@@ -122,12 +122,20 @@ const Column = styled.div`
 
 const Row = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const Check = styled.div`
   margin-bottom: 33px;
-  margin-right: 30px;
+  width: 120px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
+const CheckAni = styled.img`
+  width: 100%;
 `;
 
 const Book = styled.div`
