@@ -20,29 +20,34 @@ const Checks = () => {
           직접 선정해요!
         </Content>
       </TextWrap>
-
       <AnimationWrap>
         <ChecksWrap>
-          {checkArr.map((check, idx) => (
-            <Column key={idx}>
-              <Check>
-                <Image
-                  src={`/images/checks/check${idx + 1}.gif`}
-                  width={150}
-                  height={110}
-                  alt="check mark"
-                />
-              </Check>
-              <Book>
-                <Image
-                  src={`/images/checks/book${idx + 1}.png`}
-                  width={190}
-                  height={210}
-                  alt="book below check mark"
-                />
-              </Book>
-            </Column>
-          ))}
+          <Column>
+            <Row>
+              {checkArr.map((check, idx) => (
+                <Check key={idx}>
+                  <Image
+                    src={`/images/checks/check${idx + 1}.gif`}
+                    width={150}
+                    height={110}
+                    alt="check mark"
+                  />
+                </Check>
+              ))}
+            </Row>
+            <Row>
+              {checkArr.map((check, idx) => (
+                <Book key={idx}>
+                  <Image
+                    src={`/images/checks/book${idx + 1}.png`}
+                    width={190}
+                    height={210}
+                    alt="book below check mark"
+                  />
+                </Book>
+              ))}
+            </Row>
+          </Column>
         </ChecksWrap>
         <BookImagesWrap></BookImagesWrap>
       </AnimationWrap>
@@ -55,10 +60,20 @@ const Wrapper = styled.div`
   background: #f9f9f9;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TextWrap = styled.div`
   margin-right: 156px;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
 `;
 
 const Title = styled.h2`
@@ -67,12 +82,20 @@ const Title = styled.h2`
   line-height: 70px;
   color: ${({ theme }) => theme.color.default};
   margin-bottom: 50px;
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    text-align: center;
+  }
 `;
 
 const Content = styled.p`
   font-size: 24px;
   line-height: 40px;
   color: ${({ theme }) => theme.color.default};
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    text-align: center;
+  }
 `;
 
 const AnimationWrap = styled.div`
@@ -84,19 +107,32 @@ const ChecksWrap = styled.div`
 `;
 
 const Column = styled.div`
-  ${({ theme }) => theme.common.flexColumn};
+  width: 100%;
   align-items: center;
-  margin-right: 100px;
+
   &:last-child {
     margin-right: 0;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+    ${({ theme }) => theme.common.flexColumn};
+    alignt-items: center;
+  } ;
+`;
+
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Check = styled.div`
   margin-bottom: 33px;
+  margin-right: 30px;
 `;
 
-const Book = styled.div``;
+const Book = styled.div`
+  display: flex;
+`;
 
 const BookImagesWrap = styled.div`
   display: flex;
