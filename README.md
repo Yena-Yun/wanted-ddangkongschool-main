@@ -11,12 +11,12 @@
 
 ## ✨ 구현한 기능
 
-1. 프로젝트 초반 세팅 (Typescript, Prettier, eslint, Cypress)
-2. react-slick 라이브러리로 슬라이드 기능 구현 (ReviewSlide 컴포넌트) 
-3. AOS 라이브러리를 사용하여 시간차 있는 애니메이션 구현 (Checks 컴포넌트)
-4. UI 구현 및 반응형 CSS 적용 (Header, Main, Intro, Video, Checks, ReviewSlide 컴포넌트)
-5. globalStyles 설정 및 사이트 실제 폰트 적용 (Noto Sans KR)
-6. 스크롤 시 변화하는 CSS 적용 (Header)
+1. 프로젝트 **초반 세팅** (Typescript, Prettier, eslint, Cypress)
+2. **react-slick 라이브러리**로 **슬라이드 기능** 구현 (ReviewSlide 컴포넌트) 
+3. **AOS 라이브러리**를 사용하여 **시간차 있는 애니메이션** 구현 (Checks 컴포넌트)
+4. **사이트 UI 구현** 및 **반응형 CSS** 적용 (Header, Main, Intro, Video, Checks, ReviewSlide 컴포넌트)
+5. **globalStyles 설정** 및 **사이트 실제 폰트** 적용 (Noto Sans KR)
+6. **스크롤 시 변화하는 CSS** 적용 (Header)
 
 ## 🧶 기술 스택
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
