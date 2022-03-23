@@ -2,54 +2,29 @@
 ## 1. 프로젝트 소개
 
 - 주제 : 땅콩스쿨 메인화면 클론
-- 기간 : 22.02.14 ~ 22.02.16
-
 
 
 ## 2. 배포 링크
 
-https://lucid-yonath-e29dc7.netlify.app/
+<h3>https://lucid-yonath-e29dc7.netlify.app/</h3>
 
 
-## 3. 팀원 소개
+## 3. 구현 기능
 
-<table>
-
-  <tr align="center">
-    <td><a href="https://github.com/Yena-Yun">윤예나</a></td>
-    <td><a href="https://github.com/minjuice1">박민주</a></td>
-  </tr>
-
-  <tr align="center">
-    <td><img src="https://avatars.githubusercontent.com/u/68722179?v=4" width="150px"/></td>
-    <td><img src="https://avatars.githubusercontent.com/u/82799961?v=4" width="150px"/></td>
-  </tr>
-</table>
-
-
-## 4. 구현 기능
-
-⚜ 박민주
-* ReadingBook, DiaryBook, Books, Bookmarks, Download, Footer UI 구현 및 반응형 적용
-* Books 컴포넌트에서 react-slick으로 인피니트 슬라이드 기능 구현
-* main 컴포넌트에서 mouse animation 적용
-* 모든 컴포넌트에 aos로 fade-up 적용
-* floatingButton 구현
-  
-⚜ 윤예나
+⚜ 본인이 구현한 기능
 * 프로젝트 초반 세팅 (Typescript, Prettier, eslint, Cypress)
 * globalStyles 설정 및 사이트 실제 폰트 적용 (Noto Sans KR)
-* Header, Main, Intro, Video, Checks, ReviewSlide UI 구현 및 반응형 적용
-* ReviewSlide 컴포넌트에서 react-slick으로 슬라이드 기능 구현
-* 화면 스크롤 시 Header 컴포넌트에 트랜지션 CSS 적용
+* components UI 구현 및 반응형 적용 (Header, Main, Intro, Video, Checks, ReviewSlide)
+* react-slick 라이브러리로 슬라이드 기능 구현 (ReviewSlide) 
+* 스크롤 시 변화하는 CSS 적용 (Header)
 
-## 5. 기술 스택
+## 4. 기술 스택
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![styled-components](https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
 
 
-## 6. 디렉토리 구조
+## 5. 디렉토리 구조
 
 ```bash
 .
@@ -90,7 +65,7 @@ https://lucid-yonath-e29dc7.netlify.app/
 ```
 
 
-## 7. 설치 및 실행 방법
+## 6. 설치 및 실행 방법
 클론 후 yarn install
 
     ```bash
@@ -98,7 +73,7 @@ https://lucid-yonath-e29dc7.netlify.app/
     ```
 
 
-## 8. 커밋 컨벤션
+## 7. 커밋 컨벤션
 
 깃모지를 사용하여 이모티콘만 보고 커밋의 목적이나 의도를 쉽게 식별할 수 있도록 하였습니다.
 
