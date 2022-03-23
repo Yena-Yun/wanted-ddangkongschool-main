@@ -1,9 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useState } from 'react';
+import { useCallback } from 'react';
 
 const Checks = () => {
-  const checkArr = Array(3).fill(0);
+  const [count, setCount] = useState(1);
+  // const checkArr = Array.from({ length: 3 }, (v, i) => ({
+  //   id: i + 1,
+  // }));
+
+  const checkArr = [
+    {
+      id: 1,
+      src: '/images/checks/check1.gif',
+      alt: 'check1',
+    },
+    {
+      id: 2,
+      src: '/images/checks/check2.gif',
+      alt: 'check2',
+    },
+    {
+      id: 3,
+      src: '/images/checks/check3.gif',
+      alt: 'check3',
+    },
+  ];
+
+  useEffect(() => {
+    Aos.init({ duration: 400 });
+  }, []);
 
   return (
     <Wrapper>
@@ -24,23 +54,32 @@ const Checks = () => {
         <ChecksWrap>
           <Column>
             <Row>
-              {checkArr.map((check, idx) => (
-                <Check key={idx}>
-                  <CheckAni
-                    data-aos="fade-up" data-aos-delay="100"
-                    src={`/images/checks/check${idx + 1}.gif`}
-                    width={150}
-                    height={110}
-                    alt="check mark"
-                  />
-                </Check>
-              ))}
+              <Check className="check-container">
+                <CheckImg
+                  src="/images/checks/check1.gif"
+                  alt="check1"
+                  data-aos="fade-down"
+                  data-aos-delay="0"
+                />
+                <CheckImg
+                  src="/images/checks/check2.gif"
+                  alt="check2"
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                />
+                <CheckImg
+                  src="/images/checks/check3.gif"
+                  alt="check3"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                />
+              </Check>
             </Row>
             <Row>
-              {checkArr.map((check, idx) => (
-                <Book key={idx}>
+              {checkArr.map((check) => (
+                <Book key={check.id}>
                   <Image
-                    src={`/images/checks/book${idx + 1}.png`}
+                    src={`/images/checks/book${check.id}.png`}
                     width={190}
                     height={210}
                     alt="book below check mark"
@@ -99,9 +138,7 @@ const Content = styled.p`
   }
 `;
 
-const AnimationWrap = styled.div`
-  width: 650px;
-`;
+const AnimationWrap = styled.div``;
 
 const ChecksWrap = styled.div`
   display: flex;
@@ -122,25 +159,36 @@ const Column = styled.div`
 `;
 
 const Row = styled.div`
+  width: 600px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Check = styled.div`
-  margin-bottom: 33px;
-  width: 120px;
+  display: flex;
+`;
+
+const CheckImg = styled.img`
+  width: 160px;
+  margin-right: 54px;
 
   &:last-child {
     margin-right: 0;
   }
 `;
 
-const CheckAni = styled.img`
-  width: 100%;
-`;
-
 const Book = styled.div`
   display: flex;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 const BookImagesWrap = styled.div`
