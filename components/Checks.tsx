@@ -4,15 +4,8 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useState } from 'react';
-import { useCallback } from 'react';
 
 const Checks = () => {
-  const [count, setCount] = useState(1);
-  // const checkArr = Array.from({ length: 3 }, (v, i) => ({
-  //   id: i + 1,
-  // }));
-
   const checkArr = [
     {
       id: 1,
