@@ -1,30 +1,32 @@
 
-## 1. 프로젝트 소개
+## 🧨 프로젝트 소개
 
 - 주제 : 땅콩스쿨 메인화면 클론
 
 
-## 2. 배포 링크
+## ✈ 배포 링크
 
-<h3>https://lucid-yonath-e29dc7.netlify.app/</h3>
+## https://lucid-yonath-e29dc7.netlify.app/
+
+### [velog 과제 후기](https://velog.io/@yena1025/PreOnboarding4-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%A9%94%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B3%BC%EC%A0%9C-%ED%9B%84%EA%B8%B0)
 
 
-## 3. 구현 기능
+## ✨ 구현한 기능
 
-⚜ 본인이 구현한 기능
-* 프로젝트 초반 세팅 (Typescript, Prettier, eslint, Cypress)
-* globalStyles 설정 및 사이트 실제 폰트 적용 (Noto Sans KR)
-* components UI 구현 및 반응형 적용 (Header, Main, Intro, Video, Checks, ReviewSlide)
-* react-slick 라이브러리로 슬라이드 기능 구현 (ReviewSlide) 
-* 스크롤 시 변화하는 CSS 적용 (Header)
+1. 프로젝트 **초반 세팅** (Typescript, Prettier, eslint, Cypress)
+2. **react-slick 라이브러리**로 **슬라이드 기능** 구현 (ReviewSlide 컴포넌트) 
+3. **AOS 라이브러리**를 사용하여 **시간차 있는 애니메이션** 구현 (Checks 컴포넌트)
+4. **사이트 UI 구현** 및 **반응형 CSS** 적용 (Header, Main, Intro, Video, Checks, ReviewSlide 컴포넌트)
+5. **globalStyles 설정** 및 **사이트 실제 폰트** 적용 (Noto Sans KR)
+6. **스크롤 시 변화하는 CSS** 적용 (Header)
 
-## 4. 기술 스택
+## 🧶 기술 스택
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![styled-components](https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
 
 
-## 5. 디렉토리 구조
+## 🪔 디렉토리 구조
 
 ```bash
 .
@@ -65,7 +67,7 @@
 ```
 
 
-## 6. 설치 및 실행 방법
+## 🌸 설치 및 실행 방법
 클론 후 yarn install
 
     ```bash
@@ -73,7 +75,7 @@
     ```
 
 
-## 7. 커밋 컨벤션
+## 🧚‍♀️ 커밋 컨벤션
 
 깃모지를 사용하여 이모티콘만 보고 커밋의 목적이나 의도를 쉽게 식별할 수 있도록 하였습니다.
 
