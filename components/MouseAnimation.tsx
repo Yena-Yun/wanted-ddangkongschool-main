@@ -1,13 +1,14 @@
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
 const MouseAnimation = () => {
   return (
     <Button>
-      <ButtonImg src="/images/mouse.png" alt="floatingBtn"/>
+      <Image src="/images/mouse.png" alt="floatingBtn" width={54} height={54} />
     </Button>
   );
-}
+};
 
 const Button = styled.div`
   position: absolute;
@@ -20,7 +21,7 @@ const Button = styled.div`
   animation: 0.7s ease-in 0s infinite alternate none running motion;
   transform: translateX(-50%);
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     width: 3.8%;
     min-width: 48px;
     position: absolute;
@@ -34,13 +35,13 @@ const Button = styled.div`
 
   @keyframes motion {
     0% {
-    padding-bottom: 100px;
+      padding-bottom: 100px;
     }
     100% {
-    padding-bottom: 50px;
+      padding-bottom: 50px;
     }
   }
-`
+`;
 
 const ButtonImg = styled.img`
   margin: 0px auto;
@@ -48,7 +49,7 @@ const ButtonImg = styled.img`
   height: 54px;
   bottom: 30px;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     width: 72px;
     height: 72px;
     bottom: 50px;
@@ -56,13 +57,11 @@ const ButtonImg = styled.img`
 
   @keyframes bgmove {
     0% {
-    padding-bottom: 100px;
+      padding-bottom: 100px;
     }
     100% {
-    padding-bottom: 50px;
+      padding-bottom: 50px;
     }
   }
-`
+`;
 export default MouseAnimation;
-
-

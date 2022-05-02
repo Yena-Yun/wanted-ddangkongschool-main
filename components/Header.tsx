@@ -23,6 +23,7 @@ const Header = () => {
           width={150}
           height={50}
           alt="logo"
+          priority
         />
       </LogoWrap>
       <nav>

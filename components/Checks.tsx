@@ -43,28 +43,34 @@ const Checks = () => {
           직접 선정해요!
         </Content>
       </TextWrap>
-      <AnimationWrap>
+      <div>
         <ChecksWrap>
           <Column>
             <Row>
               <Check className="check-container">
-                <CheckImg
+                <Image
                   src="/images/checks/check1.gif"
                   alt="check1"
+                  width={160}
                   data-aos="fade-down"
                   data-aos-delay="0"
+                  priority
                 />
-                <CheckImg
+                <Image
                   src="/images/checks/check2.gif"
                   alt="check2"
+                  width={160}
                   data-aos="fade-down"
                   data-aos-delay="200"
+                  priority
                 />
-                <CheckImg
+                <Image
                   src="/images/checks/check3.gif"
                   alt="check3"
+                  width={160}
                   data-aos="fade-down"
                   data-aos-delay="300"
+                  priority
                 />
               </Check>
             </Row>
@@ -83,7 +89,7 @@ const Checks = () => {
           </Column>
         </ChecksWrap>
         <BookImagesWrap></BookImagesWrap>
-      </AnimationWrap>
+      </div>
     </Wrapper>
   );
 };
@@ -130,8 +136,6 @@ const Content = styled.p`
     text-align: center;
   }
 `;
-
-const AnimationWrap = styled.div``;
 
 const ChecksWrap = styled.div`
   display: flex;
