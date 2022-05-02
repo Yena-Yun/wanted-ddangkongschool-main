@@ -6,12 +6,12 @@
 
 ## ✈ 배포 링크
 
-## https://lucid-yonath-e29dc7.netlify.app/
+## https://animation-scroll-page.netlify.app/
 
 ### [velog 과제 후기](https://velog.io/@yena1025/PreOnboarding4-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%A9%94%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B3%BC%EC%A0%9C-%ED%9B%84%EA%B8%B0)
 
 
-## ✨ 구현한 기능
+## ✨ 본인이 구현한 기능
 
 1. 프로젝트 **초반 세팅** (Typescript, Prettier, eslint, Cypress)
 2. **react-slick 라이브러리**로 **슬라이드 기능** 구현 (ReviewSlide 컴포넌트) 
