@@ -1,29 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import * as U from 'utils/constants';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const Checks = () => {
-  const checkArr = [
-    {
-      id: 1,
-      src: '/images/checks/check1.gif',
-      alt: 'check1',
-    },
-    {
-      id: 2,
-      src: '/images/checks/check2.gif',
-      alt: 'check2',
-    },
-    {
-      id: 3,
-      src: '/images/checks/check3.gif',
-      alt: 'check3',
-    },
-  ];
-
   useEffect(() => {
     Aos.init({ duration: 400 });
   }, []);
@@ -43,67 +25,51 @@ const Checks = () => {
           직접 선정해요!
         </Content>
       </TextWrap>
-      <div>
-        <ChecksWrap>
-          <Column>
-            <Row>
-              <Check className="check-container">
+      <U.FlexColumn>
+        <Row>
+          <U.FlexBox>
+            {Array.from({ length: U.CHECK_BOOK_NUMBER }).map((check, idx) => (
+              <Check key={`check_${idx}`}>
                 <Image
-                  src="/images/checks/check1.gif"
-                  alt="check1"
+                  src={`/images/checks/check${idx + 1}.gif`}
+                  alt={`check${idx + 1}`}
                   width={160}
                   height={180}
                   data-aos="fade-down"
-                  data-aos-delay="0"
-                  priority
-                />
-                <Image
-                  src="/images/checks/check2.gif"
-                  alt="check2"
-                  width={160}
-                  height={180}
-                  data-aos="fade-down"
-                  data-aos-delay="200"
-                  priority
-                />
-                <Image
-                  src="/images/checks/check3.gif"
-                  alt="check3"
-                  width={160}
-                  height={180}
-                  data-aos="fade-down"
-                  data-aos-delay="300"
-                  priority
+                  data-aos-delay={`${100 * (idx + 1)}`}
                 />
               </Check>
-            </Row>
-            <Row>
-              {checkArr.map((check) => (
-                <Book key={check.id}>
-                  <Image
-                    src={`/images/checks/book${check.id}.png`}
-                    width={190}
-                    height={210}
-                    alt="book below check mark"
-                  />
-                </Book>
-              ))}
-            </Row>
-          </Column>
-        </ChecksWrap>
-        <BookImagesWrap></BookImagesWrap>
-      </div>
+            ))}
+          </U.FlexBox>
+        </Row>
+        <Row>
+          {Array.from({ length: U.CHECK_BOOK_NUMBER }).map((book, idx) => (
+            <Book
+              key={`book_${idx + 1}`}
+              data-aos="fade-down"
+              data-aos-delay={`${150 * (idx + 1)}`}
+              data-aos-duration="500"
+            >
+              <Image
+                src={`/images/checks/book${idx + 1}.png`}
+                alt={`check_book_${idx + 1}`}
+                width={190}
+                height={210}
+              />
+            </Book>
+          ))}
+        </Row>
+      </U.FlexColumn>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
-  padding: 150px 0;
-  background: #f9f9f9;
-  display: flex;
+const Wrapper = styled(U.FlexBox)`
   justify-content: center;
+  padding: 150px 0;
+  background-color: #f9f9f9;
 
-  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+  @media (max-width: ${U.MEDIA.lg}) {
     flex-direction: column;
     align-items: center;
   }
@@ -112,7 +78,7 @@ const Wrapper = styled.div`
 const TextWrap = styled.div`
   margin-right: 156px;
 
-  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+  @media (max-width: ${U.MEDIA.lg}) {
     margin-right: 0;
     margin-bottom: 50px;
   }
@@ -125,7 +91,7 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.color.default};
   margin-bottom: 50px;
 
-  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+  @media (max-width: ${U.MEDIA.lg}) {
     text-align: center;
   }
 `;
@@ -135,65 +101,30 @@ const Content = styled.p`
   line-height: 40px;
   color: ${({ theme }) => theme.color.default};
 
-  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
+  @media (max-width: ${U.MEDIA.lg}) {
     text-align: center;
   }
 `;
 
-const ChecksWrap = styled.div`
-  display: flex;
-`;
-
-const Column = styled.div`
-  width: 100%;
-  align-items: center;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
-    ${({ theme }) => theme.common.flexColumn};
-    alignt-items: center;
-  } ;
-`;
-
-const Row = styled.div`
-  width: 600px;
-  display: flex;
+const Row = styled(U.FlexBox)`
   justify-content: space-around;
+  width: 600px;
   margin-bottom: 24px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+  ${U.NO_MARGIN_LAST}
 `;
 
 const Check = styled.div`
-  display: flex;
-`;
-
-const CheckImg = styled.img`
   width: 160px;
   margin-right: 54px;
 
-  &:last-child {
-    margin-right: 0;
-  }
+  ${U.NO_MARGIN_LAST}
 `;
 
-const Book = styled.div`
-  display: flex;
+const Book = styled(U.FlexBox)`
   margin-right: 40px;
 
-  &:last-child {
-    margin-right: 0;
-  }
-`;
-
-const BookImagesWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${U.NO_MARGIN_LAST}
 `;
 
 export default Checks;

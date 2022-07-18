@@ -7,7 +7,7 @@ export const BookSlide = () => {
   return (
     <Slide cssEase="linear">
       {Array.from({ length: INFINITE_SLIDE_BOOK_NUMBER }).map((book, idx) => (
-        <ImageBox key={idx}>
+        <ImageBox key={`infinite_slide_book_${idx + 1}`}>
           <Image
             src={`/images/infiniteSlideBooks/book${idx + 1}.png`}
             alt={`infinite_slide_book${idx + 1}`}
