@@ -1,61 +1,47 @@
-import React, { createContext, useMemo } from 'react';
 import styled from 'styled-components';
 import useMedia from 'use-media';
-import { MEDIA_QUERIES } from 'utils/constants';
 import { BookMarkText } from 'utils/data/BookMark';
 
-const MediaQueryContext = createContext(null);
-
 const Bookmarks = () => {
-  const mobileView = useMedia(MEDIA_QUERIES.mobile);
-  const tabletView = useMedia(MEDIA_QUERIES.tablet);
-  const desktopView = useMedia(MEDIA_QUERIES.desktop);
-  const mediaQueries = useMemo(
-    () => ({ mobileView, tabletView, desktopView }),
-    [mobileView, tabletView, desktopView]
-  );
-
   const tablet = useMedia({ minWidth: '768px', maxWidth: '1199px' });
   const desktop = useMedia({ minWidth: '1200px' });
 
   return (
     <Contaniner>
-      <MediaQueryContext.Provider value={mediaQueries}>
-        <Section>
-          <Header data-aos="fade-up">땅콩스쿨만의 특징</Header>
-          <MarksSection>
-            {BookMarkText.map((mark, idx) => {
-              const media = desktop
-                ? mark.subTitle.desktop
-                : tablet
-                ? mark.subTitle.tablet
-                : mark.subTitle.mobile;
+      <Section>
+        <Header data-aos="fade-up">땅콩스쿨만의 특징</Header>
+        <MarksSection>
+          {BookMarkText.map((mark, idx) => {
+            const media = desktop
+              ? mark.subTitle.desktop
+              : tablet
+              ? mark.subTitle.tablet
+              : mark.subTitle.mobile;
 
-              return (
-                <Mark
-                  key={`${mark.title}_${idx}`}
-                  data-aos="fade-up"
-                  data-aos-delay={`${idx === 0 ? idx : 150 * (idx + 1)}`}
-                >
-                  <MarkImg
-                    src={`/images/marks/mark${idx + 1}.png`}
-                    alt={`bookmark_${idx}`}
-                  />
-                  <Title>{mark.title}</Title>
-                  <SubTitleBox>
-                    {media.map((line, idx) => (
-                      <SubTitle key={`${mark.title}_line_${idx + 1}`}>
-                        {line}
-                        <br />
-                      </SubTitle>
-                    ))}
-                  </SubTitleBox>
-                </Mark>
-              );
-            })}
-          </MarksSection>
-        </Section>
-      </MediaQueryContext.Provider>
+            return (
+              <Mark
+                key={`${mark.title}_${idx}`}
+                data-aos="fade-up"
+                data-aos-delay={`${150 * (idx + 1)}`}
+              >
+                <MarkImg
+                  src={`/images/marks/mark${idx + 1}.png`}
+                  alt={`bookmark_${idx}`}
+                />
+                <Title>{mark.title}</Title>
+                <SubTitleBox>
+                  {media.map((line, idx) => (
+                    <SubTitle key={`${mark.title}_line_${idx + 1}`}>
+                      {line}
+                      <br />
+                    </SubTitle>
+                  ))}
+                </SubTitleBox>
+              </Mark>
+            );
+          })}
+        </MarksSection>
+      </Section>
     </Contaniner>
   );
 };
