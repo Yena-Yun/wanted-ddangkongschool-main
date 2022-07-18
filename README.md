@@ -1,7 +1,13 @@
 
 ## 🧨 프로젝트 소개
 
-- 땅콩스쿨 사이트의 메인 스크롤 화면 클론
+Next.js로 땅콩스쿨 사이트의 메인 스크롤 화면 클론
+
+
+## 🧶 기술 스택
+![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=da2430)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![styled-components](https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
 
 
 ## ✈ 배포 링크
@@ -19,11 +25,6 @@
 4. **사이트 UI 구현** 및 **반응형 CSS** 적용 (Header, Main, Intro, Video, Checks, ReviewSlide 컴포넌트)
 5. **globalStyles 설정** 및 **사이트 실제 폰트** 적용 (Noto Sans KR)
 6. **스크롤 시 변화하는 CSS** 적용 (Header)
-
-## 🧶 기술 스택
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![styled-components](https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
 
 
 ## 🪔 디렉토리 구조
