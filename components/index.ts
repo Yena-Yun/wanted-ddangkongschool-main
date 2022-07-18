@@ -8,13 +8,12 @@ import DiaryBook from './DiaryBook';
 import ReviewSlide from './ReviewSlide/ReviewSlide';
 import ReviewThumbnail from './ReviewSlide/ReviewThumbnail';
 import ReviewList from './ReviewSlide/ReviewList';
-import Books from './Books/Books';
+import { InfiniteBookSlide } from './InfiniteBookSlide';
 import Bookmarks from './Bookmarks';
 import Download from './Download';
 import Footer from './Footer';
 import FloatingBtn from './FloatingBtn';
-import MouseAnimation from './MouseAnimation'
-
+import MouseAnimation from './MouseAnimation';
 
 export {
   Main,
@@ -27,7 +26,7 @@ export {
   ReviewSlide,
   ReviewThumbnail,
   ReviewList,
-  Books,
+  InfiniteBookSlide,
   Bookmarks,
   Download,
   Footer,

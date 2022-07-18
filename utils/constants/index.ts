@@ -1,0 +1,1 @@
+export const INFINITE_SLIDE_BOOK_NUMBER = 15;

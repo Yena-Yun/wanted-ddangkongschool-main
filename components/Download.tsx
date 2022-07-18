@@ -19,7 +19,12 @@ const Download = () => {
           <MobileTicketImg src="/images/style10_3.png" alt="MobileTicketImg" />
           <InnerTicketImgBox>
             <LogoImgBox>
-              <Image src="/images/style10_2.png" alt="LogoImg" />
+              <Image
+                src="/images/style10_2.png"
+                alt="LogoImg"
+                width={360}
+                height={613}
+              />
             </LogoImgBox>
             <InnerSection>
               <Section>
