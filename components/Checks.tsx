@@ -36,7 +36,7 @@ const Checks = () => {
                   width={160}
                   height={180}
                   data-aos="fade-down"
-                  data-aos-delay={`${100 * (idx + 1)}`}
+                  data-aos-delay={`${200 * (idx + 1)}`}
                 />
               </Check>
             ))}
@@ -44,12 +44,7 @@ const Checks = () => {
         </Row>
         <Row>
           {Array.from({ length: U.CHECK_BOOK_NUMBER }).map((book, idx) => (
-            <Book
-              key={`book_${idx + 1}`}
-              data-aos="fade-down"
-              data-aos-delay={`${150 * (idx + 1)}`}
-              data-aos-duration="500"
-            >
+            <Book key={`book_${idx + 1}`} data-aos="fade-down">
               <Image
                 src={`/images/checks/book${idx + 1}.png`}
                 alt={`check_book_${idx + 1}`}

@@ -4,7 +4,7 @@ import Intro from './Intro';
 import Video from './Video';
 import Checks from './Checks';
 import ReadingBook from './ReadingBook';
-import DiaryBook from './DiaryBook';
+import DiaryBook from './BookDiary';
 import ReviewSlide from './ReviewSlide/ReviewSlide';
 import ReviewThumbnail from './ReviewSlide/ReviewThumbnail';
 import ReviewList from './ReviewSlide/ReviewList';

@@ -1,11 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { FlexColumn } from 'utils/constants';
 
-const DiaryBook = () => {
+const BookDiary = () => {
   return (
-    <Contaniner>
-      <InnerContainner>
+    <Container>
+      <InnerContainer>
         <Header>
           <Title data-aos="fade-up">
             매일 매일 <br />
@@ -33,56 +33,43 @@ const DiaryBook = () => {
             공유도 가능해요.
           </MobileSubTitle>
         </Header>
-        <ImgBox>
+        <div>
           <Image
-            src="/images/style6.png"
-            alt="DeskTopImg"
-            width={360}
-            height={345}
+            src="/images/book_diary.png"
+            alt="book-diary-examples"
+            width={760}
+            height={545}
           />
-        </ImgBox>
-      </InnerContainner>
-    </Contaniner>
+        </div>
+      </InnerContainer>
+    </Container>
   );
 };
 
-const Contaniner = styled.div`
-  overflow-x: hidden;
-  background-color: rgb(249, 249, 249);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  -webkit-box-align: center;
+const Container = styled(FlexColumn)`
   align-items: center;
-  margin: 0px auto;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(249, 249, 249);
+  overflow-x: hidden;
 `;
 
-const InnerContainner = styled.div`
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
+const InnerContainer = styled(FlexColumn)`
   align-items: center;
-  align-self: center;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 100%;
+  padding: 100px 20px 0;
 
-  @media screen and (min-width: 1200px) {
-    padding-top: 150px;
+  @media (min-width: 1200px) {
     width: 100%;
     max-width: 1200px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 0px auto;
+    padding: 150px 30px 0;
+    margin: 0 auto;
   }
 
   @media (min-width: 768px) and (max-width: 1200px) {
-    padding-top: 150px;
     width: 100%;
     max-width: 768px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 150px 30px 0;
   }
 `;
 
@@ -96,8 +83,8 @@ const Title = styled.div`
   @media (min-width: 768px) {
     display: block;
     font-size: 50px;
+    font-weight: 700;
     line-height: 1.44;
-    font-weight: bold;
   }
 `;
 
@@ -106,8 +93,8 @@ const TabTitle = styled.div`
 
   @media (max-width: 768px) {
     display: block;
-    font-weight: bold;
     font-size: 30px;
+    font-weight: 700;
     line-height: 1.47;
     color: rgb(51, 51, 51);
   }
@@ -120,8 +107,8 @@ const SubTitle = styled.header`
     display: block;
     padding-top: 50px;
     font-size: 24px;
-    line-height: 1.67;
     color: rgb(51, 51, 51);
+    line-height: 1.67;
   }
 `;
 
@@ -132,8 +119,8 @@ const TabSubTitle = styled.div`
     display: block;
     padding-top: 50px;
     font-size: 24px;
-    line-height: 1.67;
     color: rgb(51, 51, 51);
+    line-height: 1.67;
   }
 `;
 
@@ -144,13 +131,9 @@ const MobileSubTitle = styled.div`
     display: block;
     padding-top: 27px;
     font-size: 16px;
-    line-height: 1.75;
     color: rgb(51, 51, 51);
+    line-height: 1.75;
   }
 `;
-const ImgBox = styled.div`
-  margin-top: 0px;
-  margin-bottom: 47px;
-`;
 
-export default DiaryBook;
+export default BookDiary;

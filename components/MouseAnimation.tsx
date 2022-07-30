@@ -5,32 +5,23 @@ import styled from 'styled-components';
 const MouseAnimation = () => {
   return (
     <Button>
-      <Image src="/images/mouse.png" alt="floatingBtn" width={54} height={54} />
+      <Image src="/images/mouse.png" alt="floatingBtn" width={80} height={80} />
     </Button>
   );
 };
 
 const Button = styled.div`
-  position: absolute;
-  width: 73px;
-  min-width: 73px;
   display: block;
+  position: absolute;
+  left: 50%;
   bottom: 0px;
   padding-bottom: 50px;
-  left: 50%;
   animation: 0.7s ease-in 0s infinite alternate none running motion;
   transform: translateX(-50%);
 
-  @media (min-width: 768px) {
-    width: 3.8%;
-    min-width: 48px;
-    position: absolute;
-    animation: 0.7s ease-in 0s infinite alternate none running motion;
-    display: block;
-    bottom: 0px;
-    padding-bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
   }
 
   @keyframes motion {
@@ -43,25 +34,4 @@ const Button = styled.div`
   }
 `;
 
-const ButtonImg = styled.img`
-  margin: 0px auto;
-  width: 54px;
-  height: 54px;
-  bottom: 30px;
-
-  @media (min-width: 768px) {
-    width: 72px;
-    height: 72px;
-    bottom: 50px;
-  }
-
-  @keyframes bgmove {
-    0% {
-      padding-bottom: 100px;
-    }
-    100% {
-      padding-bottom: 50px;
-    }
-  }
-`;
 export default MouseAnimation;

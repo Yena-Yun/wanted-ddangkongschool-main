@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import * as C from 'components';
 import Aos from 'aos';
+import * as C from 'components';
 import 'aos/dist/aos.css';
 
 export default function Home() {
