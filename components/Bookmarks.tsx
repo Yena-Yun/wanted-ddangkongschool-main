@@ -1,102 +1,51 @@
 import styled from 'styled-components';
 import useMedia from 'use-media';
+import Layout from './Layout';
 import { BookMarkText } from 'utils/data/BookMark';
+import { FlexColumn } from 'utils/constants';
 
 const Bookmarks = () => {
   const tablet = useMedia({ minWidth: '768px', maxWidth: '1199px' });
   const desktop = useMedia({ minWidth: '1200px' });
 
   return (
-    <Contaniner>
-      <Section>
-        <Header data-aos="fade-up">땅콩스쿨만의 특징</Header>
-        <MarksSection>
-          {BookMarkText.map((mark, idx) => {
-            const media = desktop
-              ? mark.subTitle.desktop
-              : tablet
-              ? mark.subTitle.tablet
-              : mark.subTitle.mobile;
+    <Layout title="땅콩스쿨만의 특징" animation="fade-up">
+      <MarksSection>
+        {BookMarkText.map((mark, idx) => {
+          const media = desktop
+            ? mark.subTitle.desktop
+            : tablet
+            ? mark.subTitle.tablet
+            : mark.subTitle.mobile;
 
-            return (
-              <Mark
-                key={`${mark.title}_${idx}`}
-                data-aos="fade-up"
-                data-aos-delay={`${150 * (idx + 1)}`}
-              >
-                <MarkImg
-                  src={`/images/marks/mark${idx + 1}.png`}
-                  alt={`bookmark_${idx}`}
-                />
-                <Title>{mark.title}</Title>
-                <SubTitleBox>
-                  {media.map((line, idx) => (
-                    <SubTitle key={`${mark.title}_line_${idx + 1}`}>
-                      {line}
-                      <br />
-                    </SubTitle>
-                  ))}
-                </SubTitleBox>
-              </Mark>
-            );
-          })}
-        </MarksSection>
-      </Section>
-    </Contaniner>
+          return (
+            <Mark
+              key={`${mark.title}_${idx}`}
+              data-aos="fade-up"
+              data-aos-delay={`${150 * (idx + 1)}`}
+            >
+              <MarkImg
+                src={`/images/marks/mark${idx + 1}.png`}
+                alt={`bookmark_${idx}`}
+              />
+              <Title>{mark.title}</Title>
+              <SubTitleBox>
+                {media.map((line, idx) => (
+                  <SubTitle key={`${mark.title}_line_${idx + 1}`}>
+                    {line}
+                    <br />
+                  </SubTitle>
+                ))}
+              </SubTitleBox>
+            </Mark>
+          );
+        })}
+      </MarksSection>
+    </Layout>
   );
 };
 
-const Contaniner = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  background-color: rgb(249, 249, 249);
-  overflow-x: hidden;
-`;
-
-const Section = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 100px;
-  padding: 0 20px;
-
-  @media (min-width: 1200px) {
-    width: 100%;
-    max-width: 1200px;
-    padding: 150px 30px 0;
-  }
-
-  @media (min-width: 768px) and (max-width: 1200px) {
-    width: 100%;
-    max-width: 1200px;
-    padding: 150px 30px 0;
-  }
-`;
-
-const Header = styled.div`
-  margin: 0 auto;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(51, 51, 51);
-  opacity: 1;
-
-  @media (min-width: 1200px) {
-    font-size: 50px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1200px) {
-    font-size: 50px;
-  }
-`;
-
-const MarksSection = styled.div`
-  display: flex;
-  flex-direction: column;
+const MarksSection = styled(FlexColumn)`
   justify-content: flex-start;
   align-items: center;
   width: 100%;

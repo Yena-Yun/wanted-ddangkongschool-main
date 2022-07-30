@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FlexColumn } from 'utils/constants';
 
 const Video = () => {
-  const lineArr = Array(14).fill(0);
-
   return (
     <Wrapper>
       <Background>
-        {lineArr.map((line, idx) => (
-          <Line key={idx} />
-        ))}
+        {Array(14)
+          .fill(0)
+          .map((line, idx) => (
+            <Line key={idx} />
+          ))}
       </Background>
       <ContentWrap>
         <TextWrap>
@@ -36,27 +37,24 @@ const Video = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
   position: relative;
   padding-top: 115px;
 `;
 
-const Background = styled.div`
+const Background = styled(FlexColumn)`
+  align-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 800px;
   z-index: 2;
-  border: #000000;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
+  border: ${({ theme }) => theme.color.default};
 `;
 
 const ContentWrap = styled.div`
   display: flex;
+  justify-content: center;
 
   @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
     ${({ theme }) => theme.common.flexColumn}
@@ -66,17 +64,17 @@ const ContentWrap = styled.div`
 
 const Line = styled.div`
   height: 2px;
-  background: #000000;
-  opacity: 0.05;
+  background: ${({ theme }) => theme.color.default};
+  opacity: 0.1;
   margin-bottom: 56px;
 `;
 
 const TextWrap = styled.div`
   margin-right: 110px;
-  z-index: 3;
 
   @media screen and (max-width: ${({ theme }) => theme.media.desktop}) {
     margin-right: 0;
+    margin-bottom: 12px;
   }
 `;
 

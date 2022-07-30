@@ -1,5 +1,5 @@
 import Main from './Main';
-import Header from './Header';
+import Header from './Layout/Header';
 import Intro from './Intro';
 import Video from './Video';
 import Checks from './Checks';
@@ -11,9 +11,9 @@ import ReviewList from './ReviewSlide/ReviewList';
 import { InfiniteBookSlide } from './InfiniteBookSlide';
 import Bookmarks from './Bookmarks';
 import Download from './Download';
-import Footer from './Footer';
-import FloatingBtn from './FloatingBtn';
-import MouseAnimation from './MouseAnimation';
+import Footer from './Layout/Footer';
+import FloatingBtn from './common/FloatingBtn';
+import MouseAnimation from './common/MouseAnimation';
 
 export {
   Main,
